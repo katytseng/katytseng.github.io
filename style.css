@@ -27,9 +27,6 @@ body {
     padding: 40px 0;
 }
 
-.hero {
-    max-width: 600px;
-}
 
 .hero h1 {
     font-size: 4rem;
@@ -305,8 +302,8 @@ body {
     background-color: #fdcb6e;
 }
 
-.tag.highlighted[data-tag="stakeholder-management"],
-.text-highlight.stakeholder-management {
+.tag.highlighted[data-tag="cross-functional"],
+.text-highlight.cross-functional{
     background-color: #a29bfe;
 }
 
