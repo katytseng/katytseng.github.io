@@ -108,12 +108,49 @@
             border-radius: 12px;
             padding: 1.5rem;
             transition: all 0.3s ease;
+            display: flex;
         }
 
         .experience-card:hover {
             box-shadow: 0 4px 12px rgba(0,0,0,0.1);
             border-color: #d1d5db;
         }
+
+        .experience-column-left {
+            width: 80%;
+        }
+
+        .experience-column-right {
+            width: 20%;
+        }
+
+        .experience-column-right div {
+            margin: 10px 0;
+            padding: 4px 10px;
+            background-color: #f1f3f4;
+            border-radius: 40px;
+        }
+
+        .experience-column-right div a {
+            color: rgb(29, 105, 245);
+            text-decoration: none;
+            font-size: 0.9rem;
+            text-align: center;
+            display: block;
+        }
+
+        .footer {
+            margin: 60px 0 30px;
+            text-align: center;
+        }
+
+        .footer a {
+            margin: 0 30px;
+            color: #666;
+            text-decoration: none;
+        }
+
+
 
         .experience-title {
             font-size: 1.2rem;
@@ -169,27 +206,32 @@
 
         .tag.highlighted[data-tag="data-analysis"],
         .text-highlight.data-analysis {
-            background-color: #00b894;
-        }
-
-        .tag.highlighted[data-tag="prototyping"],
-        .text-highlight.prototyping {
-            background-color: #fd79a8;
+            background-color: #67d68c;
         }
 
         .tag.highlighted[data-tag="agile"],
         .text-highlight.agile {
-            background-color: #fdcb6e;
+            background-color: #fd79a8;
         }
 
-        .tag.highlighted[data-tag="stakeholder-management"],
-        .text-highlight.stakeholder-management {
-            background-color: #a29bfe;
+        .tag.highlighted[data-tag="cross-functional"],
+        .text-highlight.cross-functional {
+            background-color: #e7cc00;
         }
 
         .tag.highlighted[data-tag="product-strategy"],
         .text-highlight.product-strategy {
+            background-color: #a29bfe;
+        }
+
+        .tag.highlighted[data-tag="experiments"],
+        .text-highlight.experiments {
             background-color: #e17055;
+        }
+
+        .tag.highlighted[data-tag="data-reporting"],
+        .text-highlight.data-reporting {
+            background-color: #ebab60;
         }
 
         @media (max-width: 768px) {
@@ -201,60 +243,85 @@
 </head>
 <body>
     <div class="container">
-        <a href="index.html" class="back-btn">← Back to Home</a>
+        <a href="index.html" class="back-btn">Katy Tseng</a>
         
         <div class="role-header">
+            <p>How I will bring value as an</p>
             <h1>Associate Product Manager</h1>
-            <p>Help develop product that users love.</p>
+            <p>leading with <strong>customer-obsesssed perspective</strong> to <strong>develop products that users love</strong>.</p>
         </div>
 
         <div class="filter-section">
             <label class="filter-label">Filter by skills:</label>
             <div class="filter-buttons">
+                <button class="filter-btn" onclick="toggleFilter('agile')">Agile Tools</button>
+                <button class="filter-btn" onclick="toggleFilter('cross-functional')">Cross-Functional Collaboration</button>
                 <button class="filter-btn" onclick="toggleFilter('user-research')">User Research</button>
-                <button class="filter-btn" onclick="toggleFilter('data-analysis')">Data Analysis</button>
-                <button class="filter-btn" onclick="toggleFilter('prototyping')">Prototyping</button>
-                <button class="filter-btn" onclick="toggleFilter('agile')">Agile</button>
-                <button class="filter-btn" onclick="toggleFilter('stakeholder-management')">Stakeholder Management</button>
+                <button class="filter-btn" onclick="toggleFilter('data-analysis')">Data Analysis & Visualization</button>
+                <button class="filter-btn" onclick="toggleFilter('experiments')">A/B Experiments</button>
+                <button class="filter-btn" onclick="toggleFilter('data-reporting')">Data-Driven Decision Making</button>
                 <button class="filter-btn" onclick="toggleFilter('product-strategy')">Product Strategy</button>
             </div>
         </div>
 
         <div class="experiences-grid">
             <div class="experience-card">
-                <div class="experience-title">Mobile App Feature Development</div>
-                <div class="experience-company">TechCorp • 2023</div>
-                <div class="experience-description">Led cross-functional team to design and launch user onboarding flow that increased conversion by 25%. Conducted user interviews and A/B tests to validate assumptions.</div>
-                <div class="experience-tags">
-                    <span class="tag" data-tag="user-research">User Research</span>
-                    <span class="tag" data-tag="data-analysis">Data Analysis</span>
-                    <span class="tag" data-tag="prototyping">Prototyping</span>
-                    <span class="tag" data-tag="agile">Agile</span>
+                <div class="experience-column-left">
+                    <div class="experience-title">Project Management Experience</div>
+                    <div class="experience-company">GameChanger • Company-wide Hackathon</div>
+                    <div class="experience-description">
+                        How I contributed as a project manager:
+                        <li>Identified a user pain point through customer journey analysis (mobile behavior data) and developed a pitch around it</li>
+                        <li>Led a cross-functional team (designer, engineers) through end-to-end problem solving, from ideation to delivery</li>
+                        <li>Managed workflow in Shortcut (Agile) and defined clear project acceptance criteria</li>
+                        <li>Integrated user interview research to validate the user pain point (qualitative data)</li>
+                        <li>⭐️ North Star: Improved mobile app search functionality for a more personalized user experience</li>
+                    </div>
+                    <div class="experience-tags">
+                        <span class="tag" data-tag="user-research">User Research</span>
+                        <span class="tag" data-tag="data-analysis">Data Analysis</span>
+                        <span class="tag" data-tag="cross-functional">Cross-Functional Collaboration</span>
+                        <span class="tag" data-tag="agile">Agile</span>
+                        <span class="tag" data-tag="product-strategy">Product Strategy</span>
+                    </div>
                 </div>
+                <div class="experience-column-right">
+                    <div><a href="files/Hackathon_Slides.pdf" target="_blank">Final Presentation</a></div>
+                    <div><a href="files/Hackathon_Search.pdf" target="_blank">Project Documentation</a></div>
+                </div>
+                
             </div>
 
             <div class="experience-card">
-                <div class="experience-title">E-commerce Platform Redesign</div>
-                <div class="experience-company">RetailPlus • 2022</div>
-                <div class="experience-description">Managed product roadmap for checkout optimization project. Collaborated with engineering and design teams to reduce cart abandonment by 18%.</div>
-                <div class="experience-tags">
-                    <span class="tag" data-tag="data-analysis">Data Analysis</span>
-                    <span class="tag" data-tag="stakeholder-management">Stakeholder Management</span>
-                    <span class="tag" data-tag="product-strategy">Product Strategy</span>
-                    <span class="tag" data-tag="agile">Agile</span>
+                <div class="experience-column-left">
+                    <div class="experience-title">Data Analytics for Product Teams</div>
+                    <div class="experience-company">GameChanger • CX Analytics Internship</div>
+                    <div class="experience-description">
+                        How I provided data-driven insights for product teams:
+                        <li>Developed a KPI Looker Dashboard and monthly reporting framework for teams to track customer insights data</li>
+                        <li>Conducted customer sentiment analysis for A/B testing to evaluate feature performance and user satisfaction</li>
+                        <li>Presented findings during product planning sessions to advocate for the voices of the customers</li>
+                        <li>Analyzed user behavior data to uncover pain points and guide sprint cycle OKRs</li>
+                    </div>
+                    <div class="experience-tags">
+                        <span class="tag" data-tag="user-research">User Research</span>
+                        <span class="tag" data-tag="data-analysis">Data Analysis</span>
+                        <span class="tag" data-tag="cross-functional">Cross-Functional Collaboration</span>
+                        <span class="tag" data-tag="agile">Agile</span>
+                        <span class="tag" data-tag="product-strategy">Product Strategy</span>
+                    </div>
                 </div>
-            </div>
-
-            <div class="experience-card">
-                <div class="experience-title">Customer Feedback Integration Tool</div>
-                <div class="experience-company">StartupXYZ • 2022</div>
-                <div class="experience-description">Developed requirements and wireframes for internal tool that streamlined customer feedback collection. Resulted in 40% faster response time to customer issues.</div>
-                <div class="experience-tags">
-                    <span class="tag" data-tag="user-research">User Research</span>
-                    <span class="tag" data-tag="prototyping">Prototyping</span>
-                    <span class="tag" data-tag="stakeholder-management">Stakeholder Management</span>
+                <div class="experience-column-right">
+                    <div><a href="files/User_Journey_Analysis.pdf" target="_blank">User Journey Analysis</a></div>
+                    <div><a href="files/June_Report.pdf" target="_blank">Monthly Report Example</a></div>
+                    <div><a href="files/Activators_Dashboard.pdf" target="_blank">Looker Dashboard Example</a></div>
                 </div>
+                
             </div>
+        </div>
+        <div class="footer">
+            <a href="mailto:katy.tseng12@gmail.com">📧 Email</a>
+            <a href="https://www.linkedin.com/in/katy-tseng/">💼 LinkedIn</a>
         </div>
     </div>
 
@@ -317,16 +384,21 @@
 
         function getKeywordsForFilter(filterTag) {
             const keywordMap = {
-                'user-research': ['user', 'users', 'interviews', 'research', 'feedback', 'customer'],
-                'data-analysis': ['data', 'analysis', 'conversion', 'tests'],
-                'prototyping': ['wireframes', 'design', 'requirements'],
-                'agile': ['cross-functional', 'team'],
-                'stakeholder-management': ['collaborated', 'teams', 'managed'],
-                'product-strategy': ['roadmap', 'strategy', 'optimization']
+                'user-research': ['pain point', 'user interview', 'user satisfaction'],
+                'data-analysis': ['KPI Looker Dashboard', 'monthly reporting', 'customer journey analysis', 'customer sentiment analysis', 'Analyzed user behavior data'],
+                'agile': ['Agile'],
+                'cross-functional': ['cross-functional', 'product teams'],
+                'product-strategy': ['product planning sessions', 'guide sprint cycle OKRs'],
+                'experiments': ['A/B testing'],
+                'data-reporting': ['mobile behavior data', 'qualitative data', 'Presented findings', 'voices of the customers']
             };
+
+        
             
             return keywordMap[filterTag] || [];
         }
     </script>
 </body>
 </html>
+
+
