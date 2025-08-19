@@ -2,39 +2,346 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katy's Portfolio</title>
     <link rel="stylesheet" href="https://katytseng.github.io/style.css">
-    <link rel="stylesheet" href="https://katytseng.github.io/about-style.css">
-    <script src="https://unpkg.com/akar-icons-fonts"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <link rel="icon" href="images/site.jpeg">
-    <title>Katy Tseng</title>
 </head>
-<body class="homepage">
-    <nav>
-        <a href="https://katytseng.github.io/index.html">about</a>
-        <a href="https://katytseng.github.io/resume.html">resume</a>
-        <a href="https://katytseng.github.io/projects.html">projects</a>
-        <a href="https://katytseng.github.io/contact.html">contact</a>
-    </nav> 
-    <main>
-        <div class="cover">
-            <div class="coverText">
-            <h1>Hello!</h1>
-            <p>I'm Katy, and I'm a high school Junior at Canyon Crest Academy, San Deigo. I am fluent in English and Chinese Mandarin. I am passionate about programming, especially frontend web development. My goal is to major in Computer Science. My dream job is a Frontend Engineer at MLB. I play softball on my school's varsity team, and in my free time, I enjoy watching Korean TV shows and watching baseball games.</p>
-            </div>
-            <div class="coverImg">
-            <img id="me" src="https://katytseng.github.io/images/katy-artwork.png" alt="katy">
+<body>
+    <!-- Home Page -->
+    <div id="home" class="home-page">
+        <div class="container">
+            <div class="hero">
+                <h1>Hi, I'm Katy.</h1>
+                <p>I'm a customer-focused & data-driven problem solver.</p>
+                
+                <div class="button-group">
+                    <a href="#" class="btn btn-primary">📧 Email</a>
+                    <a href="#" class="btn btn-secondary">💼 LinkedIn</a>
+                </div>
+                
+                <div class="career-tracks">
+                    <p>I am looking for opportunity to bridge data + people, specifically in these career tracks:</p>
+                    
+                    <div class="roles-grid">
+                        <div class="role-card" onclick="showRole('apm')">
+                            <h3>Associate Product Manager</h3>
+                            <p>Help develop product that users love.</p>
+                            <span class="role-link">How I Add Value →</span>
+                        </div>
+                        
+                        <div class="role-card" onclick="showRole('growth')">
+                            <h3>Growth & Strategy Analyst</h3>
+                            <p>Drive acquisition, retention, and monetization</p>
+                            <span class="role-link">What I Deliver →</span>
+                        </div>
+                        
+                        <div class="role-card" onclick="showRole('ci')">
+                            <h3>Customer Intelligence</h3>
+                            <p>Empathize with customer and optimize their experiences</p>
+                            <span class="role-link">How I Contribute →</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </main>
-    <div class="socials">
-        <a href="https://www.instagram.com/katy.tseng/" target="blank"><i class="ai-instagram-fill"></i></a>
-        <a href="https://www.linkedin.com/in/katy-tseng-553a50207" target="blank"><i class="ai-linkedin-box-fill"></i></a>
-        <a href="https://github.com/katytseng" target="blank"><i class="ai-github-fill"></i></a>
-        <a href="https://katytseng.github.io/" target="blank"><i class="ai-globe"></i></a>
     </div>
-    <p id="copyright">Coded by Katy with ♡ 2022</p>
+
+    <!-- Associate Product Manager Page -->
+    <div id="apm-page" class="role-page">
+        <div class="container">
+            <a href="#" class="back-btn" onclick="showHome()">← Back to Home</a>
+            
+            <div class="role-header">
+                <h1>Associate Product Manager</h1>
+                <p>Help develop product that users love.</p>
+            </div>
+
+            <div class="filter-section">
+                <label class="filter-label">Filter by skills:</label>
+                <div class="filter-buttons" id="apm-filters">
+                    <button class="filter-btn" onclick="toggleFilter('apm', 'user-research')">User Research</button>
+                    <button class="filter-btn" onclick="toggleFilter('apm', 'data-analysis')">Data Analysis</button>
+                    <button class="filter-btn" onclick="toggleFilter('apm', 'prototyping')">Prototyping</button>
+                    <button class="filter-btn" onclick="toggleFilter('apm', 'agile')">Agile</button>
+                    <button class="filter-btn" onclick="toggleFilter('apm', 'stakeholder-management')">Stakeholder Management</button>
+                    <button class="filter-btn" onclick="toggleFilter('apm', 'product-strategy')">Product Strategy</button>
+                </div>
+            </div>
+
+            <div class="experiences-grid" id="apm-experiences">
+                <div class="experience-card">
+                    <div class="experience-title">Mobile App Feature Development</div>
+                    <div class="experience-company">TechCorp • 2023</div>
+                    <div class="experience-description">Led cross-functional team to design and launch user onboarding flow that increased conversion by 25%. Conducted user interviews and A/B tests to validate assumptions.</div>
+                    <div class="experience-tags">
+                        <span class="tag" data-tag="user-research">User Research</span>
+                        <span class="tag" data-tag="data-analysis">Data Analysis</span>
+                        <span class="tag" data-tag="prototyping">Prototyping</span>
+                        <span class="tag" data-tag="agile">Agile</span>
+                    </div>
+                </div>
+
+                <div class="experience-card">
+                    <div class="experience-title">E-commerce Platform Redesign</div>
+                    <div class="experience-company">RetailPlus • 2022</div>
+                    <div class="experience-description">Managed product roadmap for checkout optimization project. Collaborated with engineering and design teams to reduce cart abandonment by 18%.</div>
+                    <div class="experience-tags">
+                        <span class="tag" data-tag="data-analysis">Data Analysis</span>
+                        <span class="tag" data-tag="stakeholder-management">Stakeholder Management</span>
+                        <span class="tag" data-tag="product-strategy">Product Strategy</span>
+                        <span class="tag" data-tag="agile">Agile</span>
+                    </div>
+                </div>
+
+                <div class="experience-card">
+                    <div class="experience-title">Customer Feedback Integration Tool</div>
+                    <div class="experience-company">StartupXYZ • 2022</div>
+                    <div class="experience-description">Developed requirements and wireframes for internal tool that streamlined customer feedback collection. Resulted in 40% faster response time to customer issues.</div>
+                    <div class="experience-tags">
+                        <span class="tag" data-tag="user-research">User Research</span>
+                        <span class="tag" data-tag="prototyping">Prototyping</span>
+                        <span class="tag" data-tag="stakeholder-management">Stakeholder Management</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Growth & Strategy Analyst Page -->
+    <div id="growth-page" class="role-page">
+        <div class="container">
+            <a href="#" class="back-btn" onclick="showHome()">← Back to Home</a>
+            
+            <div class="role-header">
+                <h1>Growth & Strategy Analyst</h1>
+                <p>Drive acquisition, retention, and monetization</p>
+            </div>
+
+            <div class="filter-section">
+                <label class="filter-label">Filter by skills:</label>
+                <div class="filter-buttons" id="growth-filters">
+                    <button class="filter-btn" onclick="toggleFilter('growth', 'sql')">SQL</button>
+                    <button class="filter-btn" onclick="toggleFilter('growth', 'python')">Python</button>
+                    <button class="filter-btn" onclick="toggleFilter('growth', 'cohort-analysis')">Cohort Analysis</button>
+                    <button class="filter-btn" onclick="toggleFilter('growth', 'a-b-testing')">A/B Testing</button>
+                    <button class="filter-btn" onclick="toggleFilter('growth', 'funnel-optimization')">Funnel Optimization</button>
+                    <button class="filter-btn" onclick="toggleFilter('growth', 'marketing-analytics')">Marketing Analytics</button>
+                </div>
+            </div>
+
+            <div class="experiences-grid" id="growth-experiences">
+                <div class="experience-card">
+                    <div class="experience-title">User Acquisition Campaign Analysis</div>
+                    <div class="experience-company">GrowthCo • 2023</div>
+                    <div class="experience-description">Analyzed multi-channel acquisition data to identify best performing channels. Optimized ad spend allocation resulting in 30% improvement in CAC efficiency.</div>
+                    <div class="experience-tags">
+                        <span class="tag" data-tag="sql">SQL</span>
+                        <span class="tag" data-tag="python">Python</span>
+                        <span class="tag" data-tag="marketing-analytics">Marketing Analytics</span>
+                        <span class="tag" data-tag="funnel-optimization">Funnel Optimization</span>
+                    </div>
+                </div>
+
+                <div class="experience-card">
+                    <div class="experience-title">Retention Strategy Development</div>
+                    <div class="experience-company">DataDriven Inc • 2022</div>
+                    <div class="experience-description">Built cohort analysis models to understand user behavior patterns. Designed and implemented retention campaigns that improved 30-day retention by 15%.</div>
+                    <div class="experience-tags">
+                        <span class="tag" data-tag="cohort-analysis">Cohort Analysis</span>
+                        <span class="tag" data-tag="sql">SQL</span>
+                        <span class="tag" data-tag="python">Python</span>
+                        <span class="tag" data-tag="a-b-testing">A/B Testing</span>
+                    </div>
+                </div>
+
+                <div class="experience-card">
+                    <div class="experience-title">Revenue Optimization Project</div>
+                    <div class="experience-company">ScaleUp • 2021</div>
+                    <div class="experience-description">Conducted comprehensive funnel analysis to identify monetization opportunities. Implemented pricing experiments that increased ARPU by 22%.</div>
+                    <div class="experience-tags">
+                        <span class="tag" data-tag="funnel-optimization">Funnel Optimization</span>
+                        <span class="tag" data-tag="a-b-testing">A/B Testing</span>
+                        <span class="tag" data-tag="sql">SQL</span>
+                        <span class="tag" data-tag="marketing-analytics">Marketing Analytics</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Customer Intelligence Page -->
+    <div id="ci-page" class="role-page">
+        <div class="container">
+            <a href="#" class="back-btn" onclick="showHome()">← Back to Home</a>
+            
+            <div class="role-header">
+                <h1>Customer Intelligence</h1>
+                <p>Empathize with customer and optimize their experiences</p>
+            </div>
+
+            <div class="filter-section">
+                <label class="filter-label">Filter by skills:</label>
+                <div class="filter-buttons" id="ci-filters">
+                    <button class="filter-btn" onclick="toggleFilter('ci', 'customer-interviews')">Customer Interviews</button>
+                    <button class="filter-btn" onclick="toggleFilter('ci', 'survey-design')">Survey Design</button>
+                    <button class="filter-btn" onclick="toggleFilter('ci', 'behavioral-analysis')">Behavioral Analysis</button>
+                    <button class="filter-btn" onclick="toggleFilter('ci', 'journey-mapping')">Journey Mapping</button>
+                    <button class="filter-btn" onclick="toggleFilter('ci', 'nps-analysis')">NPS Analysis</button>
+                    <button class="filter-btn" onclick="toggleFilter('ci', 'segmentation')">Segmentation</button>
+                </div>
+            </div>
+
+            <div class="experiences-grid" id="ci-experiences">
+                <div class="experience-card">
+                    <div class="experience-title">Customer Experience Audit</div>
+                    <div class="experience-company">CustomerFirst • 2023</div>
+                    <div class="experience-description">Conducted comprehensive customer journey analysis across all touchpoints. Identified pain points that led to 35% reduction in customer service tickets.</div>
+                    <div class="experience-tags">
+                        <span class="tag" data-tag="customer-interviews">Customer Interviews</span>
+                        <span class="tag" data-tag="journey-mapping">Journey Mapping</span>
+                        <span class="tag" data-tag="behavioral-analysis">Behavioral Analysis</span>
+                    </div>
+                </div>
+
+                <div class="experience-card">
+                    <div class="experience-title">Voice of Customer Program</div>
+                    <div class="experience-company">ServicePro • 2022</div>
+                    <div class="experience-description">Designed and implemented systematic customer feedback collection process. Created actionable insights that improved customer satisfaction scores by 20%.</div>
+                    <div class="experience-tags">
+                        <span class="tag" data-tag="survey-design">Survey Design</span>
+                        <span class="tag" data-tag="nps-analysis">NPS Analysis</span>
+                        <span class="tag" data-tag="customer-interviews">Customer Interviews</span>
+                        <span class="tag" data-tag="segmentation">Segmentation</span>
+                    </div>
+                </div>
+
+                <div class="experience-card">
+                    <div class="experience-title">Customer Segmentation Strategy</div>
+                    <div class="experience-company">InsightCorp • 2021</div>
+                    <div class="experience-description">Built data-driven customer segments based on behavior and preferences. Enabled personalized marketing campaigns that improved engagement by 28%.</div>
+                    <div class="experience-tags">
+                        <span class="tag" data-tag="segmentation">Segmentation</span>
+                        <span class="tag" data-tag="behavioral-analysis">Behavioral Analysis</span>
+                        <span class="tag" data-tag="survey-design">Survey Design</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Track active filters for each role
+        const activeFilters = {
+            apm: new Set(),
+            growth: new Set(),
+            ci: new Set()
+        };
+
+        function showHome() {
+            document.getElementById('home').style.display = 'flex';
+            document.getElementById('apm-page').style.display = 'none';
+            document.getElementById('growth-page').style.display = 'none';
+            document.getElementById('ci-page').style.display = 'none';
+        }
+
+        function showRole(role) {
+            document.getElementById('home').style.display = 'none';
+            document.getElementById('apm-page').style.display = 'none';
+            document.getElementById('growth-page').style.display = 'none';
+            document.getElementById('ci-page').style.display = 'none';
+            
+            document.getElementById(role + '-page').style.display = 'block';
+        }
+
+        function toggleFilter(role, filterTag) {
+            const filterBtn = event.target;
+            
+            if (activeFilters[role].has(filterTag)) {
+                // Remove filter
+                activeFilters[role].delete(filterTag);
+                filterBtn.classList.remove('active');
+            } else {
+                // Add filter
+                activeFilters[role].add(filterTag);
+                filterBtn.classList.add('active');
+            }
+            
+            updateHighlights(role);
+        }
+
+        function updateHighlights(role) {
+            const experienceCards = document.querySelectorAll(`#${role}-experiences .experience-card`);
+            
+            experienceCards.forEach(card => {
+                const tags = card.querySelectorAll('.tag');
+                const description = card.querySelector('.experience-description');
+                
+                // Reset description to original text
+                if (!description.dataset.originalText) {
+                    description.dataset.originalText = description.innerHTML;
+                }
+                description.innerHTML = description.dataset.originalText;
+                
+                // Handle tag highlighting
+                tags.forEach(tag => {
+                    const tagValue = tag.getAttribute('data-tag');
+                    
+                    if (activeFilters[role].has(tagValue)) {
+                        tag.classList.add('highlighted');
+                    } else {
+                        tag.classList.remove('highlighted');
+                    }
+                });
+                
+                // Handle description text highlighting
+                if (activeFilters[role].size > 0) {
+                    let descriptionHTML = description.innerHTML;
+                    
+                    activeFilters[role].forEach(filterTag => {
+                        const keywords = getKeywordsForFilter(filterTag);
+                        keywords.forEach(keyword => {
+                            const regex = new RegExp(`\\b(${keyword})\\b`, 'gi');
+                            descriptionHTML = descriptionHTML.replace(regex, `<span class="text-highlight ${filterTag}">$1</span>`);
+                        });
+                    });
+                    
+                    description.innerHTML = descriptionHTML;
+                }
+            });
+        }
+
+        function getKeywordsForFilter(filterTag) {
+            const keywordMap = {
+                // APM keywords
+                'user-research': ['user', 'users', 'interviews', 'research', 'feedback', 'customer'],
+                'data-analysis': ['data', 'analysis', 'analytics', 'metrics', 'conversion', 'A/B', 'tests'],
+                'prototyping': ['wireframes', 'prototypes', 'design', 'mockups', 'requirements'],
+                'agile': ['agile', 'scrum', 'sprint', 'iterative', 'cross-functional'],
+                'stakeholder-management': ['stakeholder', 'collaborated', 'teams', 'management', 'coordination'],
+                'product-strategy': ['roadmap', 'strategy', 'product', 'planning', 'optimization'],
+                
+                // Growth keywords
+                'sql': ['SQL', 'data', 'database', 'queries'],
+                'python': ['Python', 'analysis', 'models', 'automation'],
+                'cohort-analysis': ['cohort', 'retention', 'behavior', 'patterns', 'segments'],
+                'a-b-testing': ['A/B', 'testing', 'experiments', 'variants', 'statistical'],
+                'funnel-optimization': ['funnel', 'conversion', 'optimization', 'flow', 'drop-off'],
+                'marketing-analytics': ['marketing', 'campaigns', 'channels', 'acquisition', 'CAC', 'ARPU'],
+                
+                // CI keywords
+                'customer-interviews': ['customer', 'interviews', 'feedback', 'voice', 'insights'],
+                'survey-design': ['survey', 'questionnaire', 'feedback', 'collection', 'systematic'],
+                'behavioral-analysis': ['behavior', 'behavioral', 'patterns', 'analysis', 'usage'],
+                'journey-mapping': ['journey', 'touchpoints', 'experience', 'mapping', 'process'],
+                'nps-analysis': ['NPS', 'satisfaction', 'scores', 'rating', 'customer satisfaction'],
+                'segmentation': ['segments', 'segmentation', 'personalized', 'targeting', 'groups']
+            };
+            
+            return keywordMap[filterTag] || [];
+        }
+
+        // Initialize with home page visible
+        showHome();
+    </script>
 </body>
 </html>
