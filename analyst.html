@@ -247,7 +247,7 @@
         
         <div class="role-header">
             <p>How I will deliver actionable insights as a</p>
-            <h1>Data & Product Analyst</h1>
+            <h1 id="role-title">Data & Product Analyst</h1>
             <p>driving growth in all functions -- acquisition, retention, and monetization</p>
         </div>
 
@@ -332,6 +332,23 @@
     </div>
 
     <script>
+        // Get query params
+        const params = new URLSearchParams(window.location.search);
+
+        // Check for role-title param
+        const role = params.get("role-title");
+
+        if (role) {
+        // Replace hyphens with spaces + capitalize nicely
+        const formatted = role.replace(/-/g, " ")
+                                .replace(/\b\w/g, c => c.toUpperCase());
+
+        document.getElementById("role-title").textContent = formatted;
+
+        // Also update the tab title
+        document.title = formatted + " - Katy's Portfolio";
+        }
+
         const activeFilters = new Set();
 
         function toggleFilter(filterTag) {
