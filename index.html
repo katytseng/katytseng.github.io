@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Katy's Portfolio</title>
-    <link rel="stylesheet" href="https://katytseng.github.io/style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- Home Page -->
@@ -15,8 +15,8 @@
                 <p>I'm a customer-focused & data-driven problem solver.</p>
                 
                 <div class="button-group">
-                    <a href="#" class="btn btn-primary">📧 Email</a>
-                    <a href="#" class="btn btn-secondary">💼 LinkedIn</a>
+                    <a href="#" class="btn btn-secondary">📧  Email</a>
+                    <a href="#" class="btn btn-secondary">💼  LinkedIn</a>
                 </div>
                 
                 <div class="career-tracks">
@@ -36,7 +36,7 @@
                         </div>
                         
                         <div class="role-card" onclick="showRole('ci')">
-                            <h3>Customer Intelligence</h3>
+                            <h3>Customer Insights Analyst</h3>
                             <p>Empathize with customer and optimize their experiences</p>
                             <span class="role-link">How I Contribute →</span>
                         </div>
@@ -52,27 +52,29 @@
             <a href="#" class="back-btn" onclick="showHome()">← Back to Home</a>
             
             <div class="role-header">
+                <p>How I bring value as a</p>
                 <h1>Associate Product Manager</h1>
-                <p>Help develop product that users love.</p>
+                <p>who helps develop products that users love.</p>
             </div>
 
             <div class="filter-section">
                 <label class="filter-label">Filter by skills:</label>
                 <div class="filter-buttons" id="apm-filters">
-                    <button class="filter-btn" onclick="toggleFilter('apm', 'user-research')">User Research</button>
-                    <button class="filter-btn" onclick="toggleFilter('apm', 'data-analysis')">Data Analysis</button>
-                    <button class="filter-btn" onclick="toggleFilter('apm', 'prototyping')">Prototyping</button>
                     <button class="filter-btn" onclick="toggleFilter('apm', 'agile')">Agile</button>
                     <button class="filter-btn" onclick="toggleFilter('apm', 'stakeholder-management')">Stakeholder Management</button>
+                    <button class="filter-btn" onclick="toggleFilter('apm', 'cross-functional')">Cross-Function & Stakeholder Management</button>
                     <button class="filter-btn" onclick="toggleFilter('apm', 'product-strategy')">Product Strategy</button>
+                    <button class="filter-btn" onclick="toggleFilter('apm', 'user-research')">User Research</button>
+                    <button class="filter-btn" onclick="toggleFilter('apm', 'data-analysis')">Data Analysis</button>
+                    <button class="filter-btn" onclick="toggleFilter('apm', 'prototyping')">A/B Experiments</button>
                 </div>
             </div>
 
             <div class="experiences-grid" id="apm-experiences">
                 <div class="experience-card">
-                    <div class="experience-title">Mobile App Feature Development</div>
-                    <div class="experience-company">TechCorp • 2023</div>
-                    <div class="experience-description">Led cross-functional team to design and launch user onboarding flow that increased conversion by 25%. Conducted user interviews and A/B tests to validate assumptions.</div>
+                    <div class="experience-title">Project Management Experience</div>
+                    <div class="experience-company">GameChanger • 2025</div>
+                    <div class="experience-description">Led a cross-functional team through end-to-end problem solving using Agile development workflow as a Project Manager during company-wide hackathon to improving the search functionality.</div>
                     <div class="experience-tags">
                         <span class="tag" data-tag="user-research">User Research</span>
                         <span class="tag" data-tag="data-analysis">Data Analysis</span>
@@ -113,8 +115,9 @@
             <a href="#" class="back-btn" onclick="showHome()">← Back to Home</a>
             
             <div class="role-header">
+                <p>What I deliver as a</p>
                 <h1>Growth & Strategy Analyst</h1>
-                <p>Drive acquisition, retention, and monetization</p>
+                <p>to drive acquisition, retention, and monetization</p>
             </div>
 
             <div class="filter-section">
@@ -175,8 +178,9 @@
             <a href="#" class="back-btn" onclick="showHome()">← Back to Home</a>
             
             <div class="role-header">
-                <h1>Customer Intelligence</h1>
-                <p>Empathize with customer and optimize their experiences</p>
+                <p>How I contribute as a</p>
+                <h1>Customer Insights Analyst</h1>
+                <p>to empathize with customer and optimize their experiences</p>
             </div>
 
             <div class="filter-section">
@@ -316,8 +320,8 @@
                 'user-research': ['user', 'users', 'interviews', 'research', 'feedback', 'customer'],
                 'data-analysis': ['data', 'analysis', 'analytics', 'metrics', 'conversion', 'A/B', 'tests'],
                 'prototyping': ['wireframes', 'prototypes', 'design', 'mockups', 'requirements'],
-                'agile': ['agile', 'scrum', 'sprint', 'iterative', 'cross-functional'],
-                'stakeholder-management': ['stakeholder', 'collaborated', 'teams', 'management', 'coordination'],
+                'agile': ['agile', 'scrum', 'sprint', 'iterative', 'development', 'workflow'],
+                'cross-functional': ['cross-functional', 'collaborated', 'teams'],
                 'product-strategy': ['roadmap', 'strategy', 'product', 'planning', 'optimization'],
                 
                 // Growth keywords
