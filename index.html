@@ -24,10 +24,6 @@
             padding: 40px 20px;
         }
 
-        .container {
-            max-width: 600px;
-        }
-
         .hero h1 {
             font-size: 4rem;
             font-weight: 800;
@@ -77,7 +73,7 @@
         }
 
         .career-tracks {
-            margin-top: 3rem;
+            margin-top: 80px;
         }
 
         .career-tracks p {
@@ -87,8 +83,7 @@
         }
 
         .roles-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            display: flex;
             gap: 2rem;
             margin-top: 2rem;
         }
@@ -152,38 +147,36 @@
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="hero">
-            <h1>Hi, I'm Katy.</h1>
-            <p>I'm a customer-focused & data-driven problem solver.</p>
+    <div class="hero">
+        <h1>Hi, I'm Katy.</h1>
+        <p>I'm a customer-focused & data-driven problem solver.</p>
+        
+        <div class="button-group">
+            <a href="#" class="btn btn-secondary">📧 Email</a>
+            <a href="#" class="btn btn-secondary">💼 LinkedIn</a>
+        </div>
+        
+        <div class="career-tracks">
+            <p>I am looking for opportunity to bridge data + people, specifically in these career tracks:</p>
             
-            <div class="button-group">
-                <a href="#" class="btn btn-primary">📧 Email</a>
-                <a href="#" class="btn btn-secondary">💼 LinkedIn</a>
-            </div>
-            
-            <div class="career-tracks">
-                <p>I am looking for opportunity to bridge data + people, specifically in these career tracks:</p>
+            <div class="roles-grid">
+                <a href="apm.html" class="role-card" style="text-decoration: none; color: inherit;">
+                    <h3>Associate Product Manager</h3>
+                    <p>Help develop product that users love.</p>
+                    <span class="role-link">How I Add Value →</span>
+                </a>
                 
-                <div class="roles-grid">
-                    <a href="apm.html" class="role-card" style="text-decoration: none; color: inherit;">
-                        <h3>Associate Product Manager</h3>
-                        <p>Help develop product that users love.</p>
-                        <span class="role-link">How I Add Value →</span>
-                    </a>
-                    
-                    <a href="analyst.html" class="role-card" style="text-decoration: none; color: inherit;">
-                        <h3>Growth & Strategy Analyst</h3>
-                        <p>Drive acquisition, retention, and monetization</p>
-                        <span class="role-link">What I Deliver →</span>
-                    </a>
-                    
-                    <a href="customer.html" class="role-card" style="text-decoration: none; color: inherit;">
-                        <h3>Customer Insights Analyst</h3>
-                        <p>Empathize with customer and optimize their experiences</p>
-                        <span class="role-link">How I Contribute →</span>
-                    </a>
-                </div>
+                <a href="analyst.html" class="role-card" style="text-decoration: none; color: inherit;">
+                    <h3>Data & Product Analyst</h3>
+                    <p>Drive acquisition, retention, and monetization</p>
+                    <span class="role-link">What I Deliver →</span>
+                </a>
+                
+                <a href="customer.html" class="role-card" style="text-decoration: none; color: inherit;">
+                    <h3>Customer Insights Analyst</h3>
+                    <p>Empathize with customer and optimize their experiences</p>
+                    <span class="role-link">How I Contribute →</span>
+                </a>
             </div>
         </div>
     </div>
