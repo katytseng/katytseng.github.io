@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Growth & Strategy Analyst - Katy's Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #ffffff;
+            min-height: 100vh;
+            padding: 2rem 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin-bottom: 2rem;
+            color: #666;
+            text-decoration: none;
+            font-size: 0.9rem;
+            padding: 8px 0;
+            transition: color 0.3s ease;
+        }
+
+        .back-btn:hover {
+            color: #333;
+        }
+
+        .role-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-top: 2rem;
+        }
+
+        .role-header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: #111;
+        }
+
+        .role-header p {
+            font-size: 1.1rem;
+            color: #666;
+        }
+
+        .filter-section {
+            margin-bottom: 2rem;
+        }
+
+        .filter-label {
+            font-weight: 600;
+            margin-bottom: 1rem;
+            display: block;
+            color: #333;
+        }
+
+        .filter-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .filter-btn {
+            padding: 8px 16px;
+            border: 2px solid #e1e5e9;
+            background: white;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            color: #555;
+        }
+
+        .filter-btn:hover {
+            border-color: #d1d5db;
+        }
+
+        .filter-btn.active {
+            background-color: #111;
+            color: white;
+            border-color: #111;
+        }
+
+        .experiences-grid {
+            display: grid;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .experience-card {
+            background: white;
+            border: 1px solid #e1e5e9;
+            border-radius: 12px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .experience-card:hover {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            border-color: #d1d5db;
+        }
+
+        .experience-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #111;
+        }
+
+        .experience-company {
+            color: #666;
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+        }
+
+        .experience-description {
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .experience-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .tag {
+            padding: 4px 8px;
+            background-color: #f1f3f4;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            color: #555;
+            transition: all 0.3s ease;
+        }
+
+        .tag.highlighted {
+            color: white;
+            font-weight: 500;
+        }
+
+        .text-highlight {
+            color: white;
+            font-weight: 500;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+
+        /* Growth Colors */
+        .tag.highlighted[data-tag="sql"],
+        .text-highlight.sql {
+            background-color: #0984e3;
+        }
+
+        .tag.highlighted[data-tag="python"],
+        .text-highlight.python {
+            background-color: #00cec9;
+        }
+
+        .tag.highlighted[data-tag="cohort-analysis"],
+        .text-highlight.cohort-analysis {
+            background-color: #6c5ce7;
+        }
+
+        .tag.highlighted[data-tag="a-b-testing"],
+        .text-highlight.a-b-testing {
+            background-color: #ff7675;
+        }
+
+        .tag.highlighted[data-tag="funnel-optimization"],
+        .text-highlight.funnel-optimization {
+            background-color: #fd79a8;
+        }
+
+        .tag.highlighted[data-tag="marketing-analytics"],
+        .text-highlight.marketing-analytics {
+            background-color: #e84393;
+        }
+
+        @media (max-width: 768px) {
+            .filter-buttons {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-btn">← Back to Home</a>
+        
+        <div class="role-header">
+            <h1>Growth & Strategy Analyst</h1>
+            <p>Drive acquisition, retention, and monetization</p>
+        </div>
+
+        <div class="filter-section">
+            <label class="filter-label">Filter by skills:</label>
+            <div class="filter-buttons">
+                <button class="filter-btn" onclick="toggleFilter('sql')">SQL</button>
+                <button class="filter-btn" onclick="toggleFilter('python')">Python</button>
+                <button class="filter-btn" onclick="toggleFilter('cohort-analysis')">Cohort Analysis</button>
+                <button class="filter-btn" onclick="toggleFilter('a-b-testing')">A/B Testing</button>
+                <button class="filter-btn" onclick="toggleFilter('funnel-optimization')">Funnel Optimization</button>
+                <button class="filter-btn" onclick="toggleFilter('marketing-analytics')">Marketing Analytics</button>
+            </div>
+        </div>
+
+        <div class="experiences-grid">
+            <div class="experience-card">
+                <div class="experience-title">User Acquisition Campaign Analysis</div>
+                <div class="experience-company">GrowthCo • 2023</div>
+                <div class="experience-description">Analyzed multi-channel acquisition data to identify best performing channels. Optimized ad spend allocation resulting in 30% improvement in CAC efficiency.</div>
+                <div class="experience-tags">
+                    <span class="tag" data-tag="sql">SQL</span>
+                    <span class="tag" data-tag="python">Python</span>
+                    <span class="tag" data-tag="marketing-analytics">Marketing Analytics</span>
+                    <span class="tag" data-tag="funnel-optimization">Funnel Optimization</span>
+                </div>
+            </div>
+
+            <div class="experience-card">
+                <div class="experience-title">Retention Strategy Development</div>
+                <div class="experience-company">DataDriven Inc • 2022</div>
+                <div class="experience-description">Built cohort analysis models to understand user behavior patterns. Designed and implemented retention campaigns that improved 30-day retention by 15%.</div>
+                <div class="experience-tags">
+                    <span class="tag" data-tag="cohort-analysis">Cohort Analysis</span>
+                    <span class="tag" data-tag="sql">SQL</span>
+                    <span class="tag" data-tag="python">Python</span>
+                    <span class="tag" data-tag="a-b-testing">A/B Testing</span>
+                </div>
+            </div>
+
+            <div class="experience-card">
+                <div class="experience-title">Revenue Optimization Project</div>
+                <div class="experience-company">ScaleUp • 2021</div>
+                <div class="experience-description">Conducted comprehensive funnel analysis to identify monetization opportunities. Implemented pricing experiments that increased ARPU by 22%.</div>
+                <div class="experience-tags">
+                    <span class="tag" data-tag="funnel-optimization">Funnel Optimization</span>
+                    <span class="tag" data-tag="a-b-testing">A/B Testing</span>
+                    <span class="tag" data-tag="sql">SQL</span>
+                    <span class="tag" data-tag="marketing-analytics">Marketing Analytics</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const activeFilters = new Set();
+
+        function toggleFilter(filterTag) {
+            const filterBtn = event.target;
+            
+            if (activeFilters.has(filterTag)) {
+                activeFilters.delete(filterTag);
+                filterBtn.classList.remove('active');
+            } else {
+                activeFilters.add(filterTag);
+                filterBtn.classList.add('active');
+            }
+            
+            updateHighlights();
+        }
+
+        function updateHighlights() {
+            const experienceCards = document.querySelectorAll('.experience-card');
+            
+            experienceCards.forEach(card => {
+                const tags = card.querySelectorAll('.tag');
+                const description = card.querySelector('.experience-description');
+                
+                // Reset description
+                if (!description.dataset.originalText) {
+                    description.dataset.originalText = description.innerHTML;
+                }
+                description.innerHTML = description.dataset.originalText;
+                
+                // Handle tag highlighting
+                tags.forEach(tag => {
+                    const tagValue = tag.getAttribute('data-tag');
+                    if (activeFilters.has(tagValue)) {
+                        tag.classList.add('highlighted');
+                    } else {
+                        tag.classList.remove('highlighted');
+                    }
+                });
+                
+                // Handle description text highlighting
+                if (activeFilters.size > 0) {
+                    let descriptionHTML = description.innerHTML;
+                    
+                    activeFilters.forEach(filterTag => {
+                        const keywords = getKeywordsForFilter(filterTag);
+                        keywords.forEach(keyword => {
+                            const regex = new RegExp(`\\b(${keyword})\\b`, 'gi');
+                            descriptionHTML = descriptionHTML.replace(regex, `<span class="text-highlight ${filterTag}">$1</span>`);
+                        });
+                    });
+                    
+                    description.innerHTML = descriptionHTML;
+                }
+            });
+        }
+
+        function getKeywordsForFilter(filterTag) {
+            const keywordMap = {
+                'sql': ['SQL', 'data'],
+                'python': ['Python', 'analysis', 'models'],
+                'cohort-analysis': ['cohort', 'retention', 'behavior', 'patterns'],
+                'a-b-testing': ['experiments'],
+                'funnel-optimization': ['funnel', 'optimization'],
+                'marketing-analytics': ['marketing', 'campaigns', 'channels', 'acquisition', 'CAC', 'ARPU']
+            };
+            
+            return keywordMap[filterTag] || [];
+        }
+    </script>
+</body>
+</html>
