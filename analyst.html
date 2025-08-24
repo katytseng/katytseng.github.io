@@ -18,6 +18,7 @@
             background-color: #ffffff;
             min-height: 100vh;
             padding: 2rem 0;
+            
         }
 
         .container {
@@ -53,13 +54,50 @@
             color: #111;
         }
 
+        .certification {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        
+
+        .cert-card {
+            background: white;
+            border: 1px solid #e1e5e9;
+            border-radius: 12px;
+            padding: 0.8rem;
+            transition: all 0.3s ease;
+            width: 25%;
+            display: flex;
+            font-size: 0.85rem;
+        }
+        .cert-card:hover {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            border-color: #d1d5db;
+        }
+
+        .cert-card a {
+            color: rgb(29, 105, 245);
+            text-decoration: none;
+        }
+
+        .cert-badge {
+            margin-right: 12px;
+            width: 60%;
+        }
+
+        .cert-badge img{
+            width: 100%;
+            height: auto;
+        }
+
         .role-header p {
             font-size: 1.1rem;
             color: #666;
         }
 
         .filter-section {
-            margin-bottom: 2rem;
+            margin: 2rem 0;
         }
 
         .filter-label {
@@ -109,7 +147,10 @@
             padding: 1.5rem;
             transition: all 0.3s ease;
             display: flex;
+            
         }
+
+        
 
         .experience-card:hover {
             box-shadow: 0 4px 12px rgba(0,0,0,0.1);
@@ -119,16 +160,22 @@
         .experience-column-left {
             width: 80%;
         }
+        .experience-column-left blockquote{
+            margin-left: 20px;
+            list-style: circle;
+        }
 
         .experience-column-right {
             width: 20%;
+            padding-left: 10px;
+            line-height: 1.2;
         }
 
         .experience-column-right div {
             margin: 10px 0;
-            padding: 4px 10px;
+            padding: 8px 10px;
             background-color: #f1f3f4;
-            border-radius: 40px;
+            border-radius: 15px;
         }
 
         .experience-column-right div a {
@@ -137,6 +184,14 @@
             font-size: 0.9rem;
             text-align: center;
             display: block;
+            
+        }
+
+        .experience-column-right .note {
+            font-size: 0.7rem;
+            color: #999;
+            padding: 10px;
+            border-radius: 10px;
         }
 
         .footer {
@@ -145,7 +200,7 @@
         }
 
         .footer a {
-            margin: 0 30px;
+            margin-left: 30px;
             color: #666;
             text-decoration: none;
         }
@@ -175,6 +230,82 @@
             display: flex;
             flex-wrap: wrap;
             gap: 0.5rem;
+        }
+
+        .process-toggle {
+            background: none;
+            border: none;
+            padding: 0px 0px 0px;
+            margin: 0rem 0;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0px;
+            border-radius: 15px;
+            transition: all 0.3s ease;
+        }
+
+
+        .process-item {
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-radius: 10px;
+            padding: 0px 4px;
+            margin-left: -4px;
+        }
+
+        .process-item:hover {
+            background-color: #f8f9fa;
+        }
+
+        .process-item::before {
+            content: "";
+        }
+
+        .process-toggle {
+            display: inline-flex;
+            align-items: baseline;
+            
+        }
+
+        .arrow {
+            width: 20px;
+            height: 20px;
+            align-items: baseline;
+            transition: transform 0.3s ease;
+            fill: currentColor;
+            flex-shrink: 0;
+        }
+
+        .arrow.expanded {
+            transform: rotate(180deg);
+        }
+
+        .process-details {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            margin-top: 0.5rem;
+        }
+
+        .process-details.expanded {
+            max-height: 200px;
+        }
+
+        .process-details ul {
+            padding-left: 40px;
+            margin: 0;
+        }
+
+        .process-details li {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 0.3rem;
+        }
+
+        .process-details li::before {
+            color: #999;
         }
 
         .tag {
@@ -248,34 +379,141 @@
         <div class="role-header">
             <p>How I will deliver actionable insights as a</p>
             <h1 id="role-title">Data & Product Analyst</h1>
-            <p>driving growth in all functions -- acquisition, retention, and monetization</p>
+            <p>driving growth in product functions -- acquisition, retention, and monetization</p>
         </div>
-
-        <div>
+        <!---<div class="certification">
+            <div class="cert-card">
+                <div class="cert-badge"><img src="images/ga4-logo.png" alt="Google Logo"></div>
+                <div class="div"><strong>Google Data Analytics Professional Certificate</strong> (March 2024) 
+                    <a href="https://www.coursera.org/account/accomplishments/professional-cert/3XQFJYQKXK3N" target="_blank">(view ↗)</a></div>
+            </div>
+            <div class="cert-card">
+                <div class="cert-badge"><img src="images/ga4-logo.png" alt="Google Logo"></div>
+                <div class="div"><strong>Google Data Analytics Professional Certificate</strong> (March 2024) 
+                    <a href="https://www.coursera.org/account/accomplishments/professional-cert/3XQFJYQKXK3N" target="_blank">(view ↗)</a></div>
+            </div>
+            <div class="cert-card">
+                <div class="cert-badge"><img src="images/ga4-logo.png" alt="Google Logo"></div>
+                <div class="div"><strong>Google Data Analytics Professional Certificate</strong> (March 2024) 
+                    <a href="https://www.coursera.org/account/accomplishments/professional-cert/3XQFJYQKXK3N" target="_blank">(view ↗)</a></div>
+            </div>
+            
+            
+        </div>-->
+        <!---<div>
             Focus: How users interact with the product itself (features, funnels, retention, engagement, behavior).<br>
             Audience: Product managers, engineers, designers. <br>
             Goal: Guide product development decisions, improve user experience, and measure feature success.
-        </div>
-        <br><br>
+        </div>-->
         <div class="filter-section">
             <label class="filter-label">Filter by skills:</label>
             <div class="filter-buttons">
+                <button class="filter-btn" onclick="toggleFilter('python')">Python</button>
+                <button class="filter-btn" onclick="toggleFilter('sql')">SQL</button>
+                <button class="filter-btn" onclick="toggleFilter('viz')">BI Tools (Looker, Tableau)</button>
                 <button class="filter-btn" onclick="toggleFilter('cross-functional')">Cross-Functional Collaboration</button>
                 <button class="filter-btn" onclick="toggleFilter('data-analysis')">Data Analysis & Visualization</button>
                 <button class="filter-btn" onclick="toggleFilter('data-reporting')">Data-Driven Decision Making</button>
                 <button class="filter-btn" onclick="toggleFilter('product-strategy')">Product Strategy</button>
-                <button class="filter-btn" onclick="toggleFilter('python')">Python</button>
             </div>
         </div>
 
         <div class="experiences-grid">
+            <div class="experience-card">
+                <div class="experience-column-left">
+                    <div class="experience-title">Customer Analytics Intern</div>
+                    <div class="experience-company">GameChanger • Internship • June - August 2025</div>
+                    <div class="experience-description">
+                        <u>Data Visualization & Reporting:</u>
+                        <li>⭐️ Goal: Kick start an standardized reporting structure that helps product teams self-serve CX data & inform decisions</li>
+                        <li>🪜 My Process:</li>
+                        <blockquote>
+                            <li>Collaborated with each product team's leadership (PM, Engineering, Designer) to understand their needs</li>
+                            <li>Customized Looker KPI dashboards for each of the 9 product teams; trained CX specialists to maintain it</li>
+                            <li>Developed a monthly report framework for CX specialists to synthesize insights from multiple data sources* </li>
+                        </blockquote>
+                        <li>🎯 Outcome: Successfully integrated Voice of the User (user needs, expectations, etc) into decision-making processes, shaping 3 iterations of Q2 sprint OKRs</li>
+                        <br>
+                        <u>Ad-Hoc & Deep Dives:</u>
+                        <li>⭐️ Goal: Iterate through analytics method that look at user interaction from CX perspective</li>
+                        <li>🪜 My Process: , including customer feedback from A/B experiments and sentiment NPS from support tickets & community forums</li>
+                        <li>🎯 Outcome: Presented user funnel data findings during Q3 planning sessions to PMs, guiding roadmaps</li>
+                        <br>
+                        <u>User Interaction Analysis (Research):</u>
+                        <li>⭐️ Goal: Iterate through analytics method that look at user interaction from CX perspective</li>
+                        <li>🪜 My Process:</li>
+                        <blockquote>
+                            <li></li>
+                            <li>Customized Looker KPI dashboards for each of the 9 product teams; trained CX specialists to maintain it</li>
+                            <li>Developed a monthly report framework/template for CX specialists to synthesize data insights</li>
+                        </blockquote>
+                        <li>🎯 Outcome: Successfully integrated Voice of the User (user needs, expectations, etc) into decision-making processes, shaping 3 iterations of Q2 sprint OKRs</li>
+                        
+
+
+                    </div>
+                    <div class="experience-tags">
+                        <span class="tag" data-tag="user-research">User Research</span>
+                        <span class="tag" data-tag="data-analysis">Data Analysis</span>
+                        <span class="tag" data-tag="cross-functional">Cross-Functional Collaboration</span>
+                        <span class="tag" data-tag="agile">Agile</span>
+                        <span class="tag" data-tag="product-strategy">Product Strategy</span>
+                    </div>
+                </div>
+                <div class="experience-column-right">
+                    <div><a href="files/Activators_Dashboard.pdf" target="_blank">Looker Dashboard Ex.</a></div>
+                    <div><a href="files/Hackathon_Search.pdf" target="_blank">Monthly Report Example</a></div>
+                    <div class="note">* Sources including Zendesk, GA4, App Reviews, Reddit Forum, Facebook Group/Messages, etc.</div>
+                    <br>
+                    <div><a href="files/Hackathon_Search.pdf" target="_blank">Ad-Hoc Deep Dive Ex.</a></div>
+                    <br>
+                    <div><a href="files/Customer_Journey_Analysis.pdf" target="_blank">Customer Journey Analysis Research Draft</a></div>
+                    <div><a href="files/Customer_Journey_Analysis.pdf" target="_blank">Hackathon Full Summary</a></div>
+                    <br>
+                    <div><a href="https://gc.com/" target="_blank">About GameChanger ↗</a></div>
+                </div>
+                
+            </div>
+
+            <div class="experience-card">
+                <div class="experience-column-left">
+                    <div class="experience-title">Data Analyst</div>
+                    <div class="experience-company">UCSB Technology Management • Part-Time • Ongoing</div>
+                    <div class="experience-description">
+                        <li>⭐️ Motivation: Improve data processing and operation of Undergrad division to help my friends and classmates</li>
+                        <li>💪 Achievements:</li>
+                        <blockquote>
+                            <li>Collaborated with each product team's leadership (PM, Engineering, Designer) to understand their needs</li>
+                            <li>Customized Looker KPI dashboards for each of the 9 product teams; trained CX specialists to maintain it</li>
+                            <li>Developed a monthly report framework/template for CX specialists to synthesize data insights</li>
+                        </blockquote>
+                    </div>
+                    <div class="experience-tags">
+                        <span class="tag" data-tag="user-research">User Research</span>
+                        <span class="tag" data-tag="data-analysis">Data Analysis</span>
+                        <span class="tag" data-tag="cross-functional">Cross-Functional Collaboration</span>
+                        <span class="tag" data-tag="agile">Agile</span>
+                        <span class="tag" data-tag="product-strategy">Product Strategy</span>
+                    </div>
+                </div>
+                <div class="experience-column-right">
+                    
+                </div>
+                
+            </div>
+
             
+
         </div>
         <div class="footer">
             <a href="mailto:katy.tseng12@gmail.com">📧 Email</a>
             <a href="https://www.linkedin.com/in/katy-tseng/">💼 LinkedIn</a>
         </div>
     </div>
+
+
+
+            
 
     <script>
         // Get query params
@@ -366,8 +604,31 @@
             
             return keywordMap[filterTag] || [];
         }
+        function toggleProcess() {
+            const details = document.getElementById('processDetails');
+            const arrow = document.querySelector('.arrow');
+            
+            details.classList.toggle('expanded');
+            arrow.classList.toggle('expanded');
+        }
     </script>
 </body>
 </html>
 
 
+
+
+
+<!--<li class="process-item" onclick="toggleProcess()">
+                            <div class="process-toggle">
+                                My Process
+                                <svg class="arrow" viewBox=""><path d="M5 10l5 5 5-5z"/></svg>
+                            </div>
+                            <div class="process-details" id="processDetails">
+                                <ul>
+                                    <li>Collaborated with each product team's leadership (PM, Engineering, Designer) to understand their needs</li>
+                                    <li>Customized Looker KPI dashboards for each of the 9 product teams; trained CX specialists to maintain it</li>
+                                    <li>Developed a monthly report framework/template for CX specialists to synthesize data insights</li>
+                                </ul>
+                            </div>
+                        </li>-->
