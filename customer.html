@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Customer Insights Analyst - Katy's Portfolio</title>
+    <title>Data & Product Analyst - Katy's Portfolio</title>
     <style>
         * {
             margin: 0;
@@ -18,6 +18,7 @@
             background-color: #ffffff;
             min-height: 100vh;
             padding: 2rem 0;
+            
         }
 
         .container {
@@ -51,11 +52,6 @@
             font-weight: 700;
             margin-bottom: 0.5rem;
             color: #111;
-        }
-
-        .role-header p {
-            font-size: 1.1rem;
-            color: #666;
         }
 
         .certification {
@@ -98,9 +94,13 @@
             height: auto;
         }
 
+        .role-header p {
+            font-size: 1.1rem;
+            color: #666;
+        }
 
         .filter-section {
-            margin-bottom: 2rem;
+            margin: 2rem 0;
         }
 
         .filter-label {
@@ -149,12 +149,66 @@
             border-radius: 12px;
             padding: 1.5rem;
             transition: all 0.3s ease;
+            display: flex;
+            
         }
+
+        
 
         .experience-card:hover {
             box-shadow: 0 4px 12px rgba(0,0,0,0.1);
             border-color: #d1d5db;
         }
+
+        .experience-column-left {
+            width: 80%;
+        }
+        .experience-column-left blockquote{
+            margin-left: 20px;
+            list-style: circle;
+        }
+
+        .experience-column-right {
+            width: 20%;
+            padding-left: 10px;
+            line-height: 1.2;
+        }
+
+        .experience-column-right div {
+            margin: 10px 0;
+            padding: 8px 10px;
+            background-color: #f1f3f4;
+            border-radius: 15px;
+        }
+
+        .experience-column-right div a {
+            color: rgb(29, 105, 245);
+            text-decoration: none;
+            font-size: 0.9rem;
+            text-align: center;
+            display: block;
+            
+        }
+
+        .experience-column-right .note {
+            font-size: 0.7rem;
+            color: #999;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        .footer {
+            margin: 60px 0 30px;
+            text-align: center;
+        }
+
+        .footer a {
+            margin-left: 30px;
+            color: #666;
+            text-decoration: none;
+        }
+
+
 
         .experience-title {
             font-size: 1.2rem;
@@ -181,6 +235,86 @@
             gap: 0.5rem;
         }
 
+        .process-toggle {
+            background: none;
+            border: none;
+            padding: 0px 0px 0px;
+            margin: 0rem 0;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0px;
+            border-radius: 15px;
+            transition: all 0.3s ease;
+        }
+
+
+        .process-item {
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-radius: 10px;
+            padding: 0px 4px;
+            margin-left: -4px;
+        }
+
+        .process-item:hover {
+            background-color: #f8f9fa;
+        }
+
+        .process-item::before {
+            content: "";
+        }
+
+        .process-toggle {
+            display: inline-flex;
+            align-items: baseline;
+            
+        }
+
+        .arrow {
+            width: 20px;
+            height: 20px;
+            transition: transform 0.3s ease;
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            flex-shrink: 0;
+            transform: translate(5px, 5px)
+        }
+
+        .arrow.expanded {
+            transform: translate(5px, 5px) rotate(180deg);
+        }
+
+        .process-details {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            margin-top: 0.5rem;
+        }
+
+        .process-details.expanded {
+            max-height: 200px;
+        }
+
+        .process-details ul {
+            padding-left: 15px;
+            margin: 0;
+        }
+
+        .process-details li {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 0.3rem;
+        }
+
+        .process-details li::before {
+            color: #999;
+        }
+
         .tag {
             padding: 4px 8px;
             background-color: #f1f3f4;
@@ -202,36 +336,40 @@
             border-radius: 3px;
         }
 
-        /* CI Colors */
-        .tag.highlighted[data-tag="customer-interviews"],
-        .text-highlight.customer-interviews {
-            background-color: #55a3ff;
+        /* APM Colors */
+        .tag.highlighted[data-tag="user-research"],
+        .text-highlight.user-research {
+            background-color: #74b9ff;
         }
 
-        .tag.highlighted[data-tag="survey-design"],
-        .text-highlight.survey-design {
-            background-color: #26de81;
+        .tag.highlighted[data-tag="data-analysis"],
+        .text-highlight.data-analysis {
+            background-color: #67d68c;
         }
 
-        .tag.highlighted[data-tag="behavioral-analysis"],
-        .text-highlight.behavioral-analysis {
-            background-color: #fc5c65;
+        .tag.highlighted[data-tag="agile"],
+        .text-highlight.agile {
+            background-color: #fd79a8;
         }
 
-        .tag.highlighted[data-tag="journey-mapping"],
-        .text-highlight.journey-mapping {
-            background-color: #fed330;
-            color: #2d3436;
+        .tag.highlighted[data-tag="cross-functional"],
+        .text-highlight.cross-functional {
+            background-color: #e7cc00;
         }
 
-        .tag.highlighted[data-tag="nps-analysis"],
-        .text-highlight.nps-analysis {
-            background-color: #45aaf2;
+        .tag.highlighted[data-tag="product-strategy"],
+        .text-highlight.product-strategy {
+            background-color: #a29bfe;
         }
 
-        .tag.highlighted[data-tag="segmentation"],
-        .text-highlight.segmentation {
-            background-color: #a55eea;
+        .tag.highlighted[data-tag="experiments"],
+        .text-highlight.experiments {
+            background-color: #e17055;
+        }
+
+        .tag.highlighted[data-tag="data-reporting"],
+        .text-highlight.data-reporting {
+            background-color: #ebab60;
         }
 
         @media (max-width: 768px) {
@@ -246,15 +384,20 @@
         <a href="index.html" class="back-btn">Katy Tseng</a>
         
         <div class="role-header">
-            <h1 id="role-title">Customer Insights Analyst</h1>
-            <p>Empathize with customer and optimize their experiences</p>
+            <p>How I will deliver actionable insights as a</p>
+            <h1 id="role-title">Data & Product Analyst</h1>
+            <p>driving growth in product functions -- acquisition, engagement, and monetization</p>
         </div>
-
         <div class="certification">
             <div class="cert-card">
                 <div class="cert-badge"><img src="images/ga4-logo.png" alt="Google Logo"></div>
-                <div class="div"><strong>Google Analytics (GA4) Certificate</strong> (August 2025) 
+                <div class="div"><strong>Google Analytics GA4 Certificate</strong> (August 2025) 
                     <a href="https://skillshop.credential.net/11070c51-2a3e-4e44-b1b8-0df7c069c7dd#acc.nBIhV0Li" target="_blank">(view ↗)</a></div>
+            </div>
+            <div class="cert-card">
+                <div class="cert-badge"><img src="images/pmi-logo.jpg" alt="Google Logo"></div>
+                <div class="div"><strong>Agile Foundations - Project Management Institute</strong> (August 2025) 
+                    <a href="files/AgileFoundations.pdf" target="_blank">(view ↗)</a></div>
             </div>
             <!---<div class="cert-card">
                 <div class="cert-badge"><img src="images/powerbi.png" alt="Google Logo"></div>
@@ -264,23 +407,142 @@
             
             
         </div>
-
+        <!---<div>
+            Focus: How users interact with the product itself (features, funnels, retention, engagement, behavior).<br>
+            Audience: Product managers, engineers, designers. <br>
+            Goal: Guide product development decisions, improve user experience, and measure feature success.
+        </div>-->
         <div class="filter-section">
             <label class="filter-label">Filter by skills:</label>
             <div class="filter-buttons">
-                <button class="filter-btn" onclick="toggleFilter('behavioral-analysis')">Behavioral Analysis</button>
-                <button class="filter-btn" onclick="toggleFilter('journey-mapping')">Journey Mapping</button>
-                <button class="filter-btn" onclick="toggleFilter('nps-analysis')">NPS Analysis</button>
-                <button class="filter-btn" onclick="toggleFilter('segmentation')">Segmentation</button>
+                <button class="filter-btn" onclick="toggleFilter('python')">Python</button>
+                <button class="filter-btn" onclick="toggleFilter('sql')">SQL</button>
+                <button class="filter-btn" onclick="toggleFilter('viz')">BI Tools (Looker, Tableau)</button>
+                <button class="filter-btn" onclick="toggleFilter('cross-functional')">Cross-Functional Collaboration</button>
+                <button class="filter-btn" onclick="toggleFilter('data-analysis')">Data Analysis & Visualization</button>
+                <button class="filter-btn" onclick="toggleFilter('data-reporting')">Data-Driven Decision Making</button>
+                <button class="filter-btn" onclick="toggleFilter('product-strategy')">Product Strategy</button>
             </div>
         </div>
 
         <div class="experiences-grid">
-            
+            <div class="experience-card">
+                <div class="experience-column-left">
+                    <div class="experience-title">Customer Analytics Intern</div>
+                    <div class="experience-company">GameChanger • Internship • June - August 2025</div>
+                    <div class="experience-description">
+                        <strong><u>Summary</u></strong><br>As the first data hire on the CX team, I built the team's analytical framework from scratch with limited 
+                        technical support and supervision. My work gave PMs a whole new lens into the voice of the customer, and for the first time, 
+                        they have easier time accessing and digesting customer feedback and sentiment to drive their decision-making. <br><br>
+                        
+                        <strong><u>Data Visualization & Reporting</u></strong>
+                        <li><strong>🛠️  Tools/Skills:</strong> Looker, Notion, Multi-source* data synthesis</li>
+                        <li><strong>🎯  Main Goal:</strong> Create standardized reporting structure for product teams to self-serve CX data</li>
+                        <li><strong>📦  Deliverables:</strong> Looker Dashboards + Monthly Report Frameworks, one for each 9 product teams</li>
+                        <li><strong>🌟 My Impact:</strong> Help PMs integrated Voice of the User (user needs, expectations, etc) into decision-making processes</li>
+                        <li class="process-item" onclick="toggleProcess()">
+                            <div class="process-toggle">
+                                <strong>🪜  My Process</strong>:
+                                <svg class="arrow" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+                            </div>
+                            <div class="process-details" id="processDetails">
+                                <blockquote>
+                                    <li>Sat with each product team's leadership (PM, Engineering, Designer) to understand their needs</li>
+                                    <li>Customized Looker KPI dashboards for each of the 9 product teams; trained CX specialists to maintain it</li>
+                                    <li>Developed a monthly report framework for CX specialists to synthesize insights from multiple data sources* </li>
+                                </blockquote>
+                            </div>
+                        </li>
+                        
+                        
+                        
+                        <br>
+                        <u>Ad-Hoc & Deep Dives:</u>
+                        <li>⭐️ Goal: Do advanced analytics on CX data for product teams, which previously was not done every before</li>
+                        <li>🪜 My Process: , including customer feedback from A/B experiments and sentiment NPS from support tickets & community forums</li>
+                        <blockquote>
+                            <li>Collaborated with each product team's leadership (PM, Engineering, Designer) to understand their needs</li>
+                            <li>Customized Looker KPI dashboards for each of the 9 product teams; trained CX specialists to maintain it</li>
+                            <li>Developed a monthly report framework for CX specialists to synthesize insights from multiple data sources* </li>
+                        </blockquote>
+                        <li>🎯 Outcome: Presented user funnel data findings during Q3 planning sessions to PMs, guiding roadmaps</li>
+                        <br>
+                        <u>User Interaction Analysis (Research):</u>
+                        <li>⭐️ Goal: Transform CX from reactive ticket resolution to proactive user experience optimization by understanding the complete user journey behind support escalations.</li>
+                        <li>🪜 My Process:</li>
+                        <blockquote>
+                            <li></li>
+                            <li>Customized Looker KPI dashboards for each of the 9 product teams; trained CX specialists to maintain it</li>
+                            <li>Developed a monthly report framework/template for CX specialists to synthesize data insights</li>
+                        </blockquote>
+                        <li>🎯 Outcome: Successfully integrated Voice of the User (user needs, expectations, etc) into decision-making processes, shaping 3 iterations of Q2 sprint OKRs</li>
+                        
+
+
+                    </div>
+                    <div class="experience-tags">
+                        <span class="tag" data-tag="user-research">User Research</span>
+                        <span class="tag" data-tag="data-analysis">Data Analysis</span>
+                        <span class="tag" data-tag="cross-functional">Cross-Functional Collaboration</span>
+                        <span class="tag" data-tag="agile">Agile</span>
+                        <span class="tag" data-tag="product-strategy">Product Strategy</span>
+                    </div>
+                </div>
+                <div class="experience-column-right">
+                    <div class="note">* Sources including Zendesk, GA4, App Reviews, Reddit Forum, Facebook Group/Messages, etc.</div>
+                    <br>
+                    <div><a href="files/Activators_Dashboard.pdf" target="_blank">Looker Dashboard Ex.</a></div>
+                    <div><a href="files/Hackathon_Search.pdf" target="_blank">Monthly Report Example</a></div>
+                    <br>
+                    <div><a href="files/Hackathon_Search.pdf" target="_blank">Ad-Hoc Deep Dive Ex.</a></div>
+                    <br>
+                    <div><a href="files/Customer_Journey_Analysis.pdf" target="_blank">Customer Journey Analysis Research Draft</a></div>
+                    <div><a href="files/Customer_Journey_Analysis.pdf" target="_blank">Hackathon Full Summary</a></div>
+                    <br>
+                    <div><a href="https://gc.com/" target="_blank">About GameChanger ↗</a></div>
+                </div>
+                
+            </div>
+
+            <div class="experience-card">
+                <div class="experience-column-left">
+                    <div class="experience-title">Data Analyst</div>
+                    <div class="experience-company">UCSB Technology Management • Part-Time • Ongoing</div>
+                    <div class="experience-description">
+                        <li>⭐️ Motivation: Improve data processing and operation of Undergrad division to help my friends and classmates</li>
+                        <li>💪 Achievements:</li>
+                        <blockquote>
+                            <li>Collaborated with each product team's leadership (PM, Engineering, Designer) to understand their needs</li>
+                            <li>Customized Looker KPI dashboards for each of the 9 product teams; trained CX specialists to maintain it</li>
+                            <li>Developed a monthly report framework/template for CX specialists to synthesize data insights</li>
+                        </blockquote>
+                    </div>
+                    <div class="experience-tags">
+                        <span class="tag" data-tag="user-research">User Research</span>
+                        <span class="tag" data-tag="data-analysis">Data Analysis</span>
+                        <span class="tag" data-tag="cross-functional">Cross-Functional Collaboration</span>
+                        <span class="tag" data-tag="agile">Agile</span>
+                        <span class="tag" data-tag="product-strategy">Product Strategy</span>
+                    </div>
+                </div>
+                <div class="experience-column-right">
+                    
+                </div>
+                
+            </div>
 
             
+
+        </div>
+        <div class="footer">
+            <a href="mailto:katy.tseng12@gmail.com">📧 Email</a>
+            <a href="https://www.linkedin.com/in/katy-tseng/">💼 LinkedIn</a>
         </div>
     </div>
+
+
+
+            
 
     <script>
         // Get query params
@@ -358,16 +620,44 @@
 
         function getKeywordsForFilter(filterTag) {
             const keywordMap = {
-                'customer-interviews': ['customer', 'interviews', 'feedback'],
-                'survey-design': ['survey', 'feedback', 'collection', 'systematic'],
-                'behavioral-analysis': ['behavior', 'behavioral', 'patterns', 'analysis'],
-                'journey-mapping': ['journey', 'touchpoints', 'experience'],
-                'nps-analysis': ['satisfaction', 'scores'],
-                'segmentation': ['segments', 'segmentation', 'personalized']
+                'user-research': ['pain point', 'user interview', 'user satisfaction'],
+                'data-analysis': ['KPI Looker Dashboard', 'monthly reporting', 'customer journey analysis', 'customer sentiment analysis', 'Analyzed user behavior data'],
+                'agile': ['Agile'],
+                'cross-functional': ['cross-functional', 'product teams'],
+                'product-strategy': ['product planning sessions', 'guide sprint cycle OKRs'],
+                'experiments': ['A/B testing'],
+                'data-reporting': ['mobile behavior data', 'qualitative data', 'Presented findings', 'voices of the customers']
             };
+
+        
             
             return keywordMap[filterTag] || [];
+        }
+        function toggleProcess() {
+            const details = document.getElementById('processDetails');
+            const arrow = document.querySelector('.arrow');
+            
+            details.classList.toggle('expanded');
+            arrow.classList.toggle('expanded');
         }
     </script>
 </body>
 </html>
+
+
+
+
+
+<!--<li class="process-item" onclick="toggleProcess()">
+                            <div class="process-toggle">
+                                My Process
+                                <svg class="arrow" viewBox=""><path d="M5 10l5 5 5-5z"/></svg>
+                            </div>
+                            <div class="process-details" id="processDetails">
+                                <ul>
+                                    <li>Collaborated with each product team's leadership (PM, Engineering, Designer) to understand their needs</li>
+                                    <li>Customized Looker KPI dashboards for each of the 9 product teams; trained CX specialists to maintain it</li>
+                                    <li>Developed a monthly report framework/template for CX specialists to synthesize data insights</li>
+                                </ul>
+                            </div>
+                        </li>-->
