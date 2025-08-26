@@ -275,14 +275,18 @@
         .arrow {
             width: 20px;
             height: 20px;
-            align-items: baseline;
             transition: transform 0.3s ease;
-            fill: currentColor;
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
             flex-shrink: 0;
+            transform: translate(5px, 5px)
         }
 
         .arrow.expanded {
-            transform: rotate(180deg);
+            transform: translate(5px, 5px) rotate(180deg);
         }
 
         .process-details {
@@ -297,7 +301,7 @@
         }
 
         .process-details ul {
-            padding-left: 40px;
+            padding-left: 15px;
             margin: 0;
         }
 
@@ -427,23 +431,44 @@
                     <div class="experience-title">Customer Analytics Intern</div>
                     <div class="experience-company">GameChanger • Internship • June - August 2025</div>
                     <div class="experience-description">
-                        <u>Data Visualization & Reporting:</u>
-                        <li>⭐️ Goal: Kick start an standardized reporting structure that helps product teams self-serve CX data & inform decisions</li>
-                        <li>🪜 My Process:</li>
+                        <strong><u>Summary</u></strong><br>As the first data hire on the CX team, I built the team's analytical framework from scratch with limited 
+                        technical support and supervision. My work gave PMs a whole new lens into the voice of the customer, and for the first time, 
+                        they have easier time accessing and digesting customer feedback and sentiment to drive their decision-making. <br><br>
+                        
+                        <strong><u>Data Visualization & Reporting</u></strong>
+                        <li><strong>🛠️  Tools/Skills:</strong> Looker, Notion, Multi-source* data synthesis</li>
+                        <li><strong>🎯  Main Goal:</strong> Create standardized reporting structure for product teams to self-serve CX data</li>
+                        <li><strong>📦  Deliverables:</strong> Looker Dashboards + Monthly Report Frameworks, one for each 9 product teams</li>
+                        <li><strong>🌟 My Impact:</strong> Help PMs integrated Voice of the User (user needs, expectations, etc) into decision-making processes</li>
+                        <li class="process-item" onclick="toggleProcess()">
+                            <div class="process-toggle">
+                                <strong>🪜  My Process</strong>:
+                                <svg class="arrow" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+                            </div>
+                            <div class="process-details" id="processDetails">
+                                <blockquote>
+                                    <li>Sat with each product team's leadership (PM, Engineering, Designer) to understand their needs</li>
+                                    <li>Customized Looker KPI dashboards for each of the 9 product teams; trained CX specialists to maintain it</li>
+                                    <li>Developed a monthly report framework for CX specialists to synthesize insights from multiple data sources* </li>
+                                </blockquote>
+                            </div>
+                        </li>
+                        
+                        
+                        
+                        <br>
+                        <u>Ad-Hoc & Deep Dives:</u>
+                        <li>⭐️ Goal: Do advanced analytics on CX data for product teams, which previously was not done every before</li>
+                        <li>🪜 My Process: , including customer feedback from A/B experiments and sentiment NPS from support tickets & community forums</li>
                         <blockquote>
                             <li>Collaborated with each product team's leadership (PM, Engineering, Designer) to understand their needs</li>
                             <li>Customized Looker KPI dashboards for each of the 9 product teams; trained CX specialists to maintain it</li>
                             <li>Developed a monthly report framework for CX specialists to synthesize insights from multiple data sources* </li>
                         </blockquote>
-                        <li>🎯 Outcome: Successfully integrated Voice of the User (user needs, expectations, etc) into decision-making processes, shaping 3 iterations of Q2 sprint OKRs</li>
-                        <br>
-                        <u>Ad-Hoc & Deep Dives:</u>
-                        <li>⭐️ Goal: Iterate through analytics method that look at user interaction from CX perspective</li>
-                        <li>🪜 My Process: , including customer feedback from A/B experiments and sentiment NPS from support tickets & community forums</li>
                         <li>🎯 Outcome: Presented user funnel data findings during Q3 planning sessions to PMs, guiding roadmaps</li>
                         <br>
                         <u>User Interaction Analysis (Research):</u>
-                        <li>⭐️ Goal: Iterate through analytics method that look at user interaction from CX perspective</li>
+                        <li>⭐️ Goal: Transform CX from reactive ticket resolution to proactive user experience optimization by understanding the complete user journey behind support escalations.</li>
                         <li>🪜 My Process:</li>
                         <blockquote>
                             <li></li>
@@ -464,9 +489,10 @@
                     </div>
                 </div>
                 <div class="experience-column-right">
+                    <div class="note">* Sources including Zendesk, GA4, App Reviews, Reddit Forum, Facebook Group/Messages, etc.</div>
+                    <br>
                     <div><a href="files/Activators_Dashboard.pdf" target="_blank">Looker Dashboard Ex.</a></div>
                     <div><a href="files/Hackathon_Search.pdf" target="_blank">Monthly Report Example</a></div>
-                    <div class="note">* Sources including Zendesk, GA4, App Reviews, Reddit Forum, Facebook Group/Messages, etc.</div>
                     <br>
                     <div><a href="files/Hackathon_Search.pdf" target="_blank">Ad-Hoc Deep Dive Ex.</a></div>
                     <br>
