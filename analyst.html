@@ -149,8 +149,12 @@
             border-radius: 12px;
             padding: 1.5rem;
             transition: all 0.3s ease;
-            display: flex;
+            margin: 0 0 30px;
             
+        }
+
+        .experience-description {
+            display: flex;
         }
 
         
@@ -169,6 +173,7 @@
         }
 
         .experience-column-right {
+            display: block;
             width: 20%;
             padding-left: 10px;
             line-height: 1.2;
@@ -227,6 +232,11 @@
             color: #555;
             line-height: 1.6;
             margin-bottom: 1rem;
+        }
+
+
+        .experience-description td, th {
+            padding: 2px 0px;
         }
 
         .experience-tags {
@@ -336,18 +346,18 @@
             border-radius: 3px;
         }
 
-        /* APM Colors */
-        .tag.highlighted[data-tag="user-research"],
+        /* Tag colors */
+        .tag.highlighted[data-tag="python"],
         .text-highlight.user-research {
             background-color: #74b9ff;
         }
 
-        .tag.highlighted[data-tag="data-analysis"],
+        .tag.highlighted[data-tag="sql"],
         .text-highlight.data-analysis {
             background-color: #67d68c;
         }
 
-        .tag.highlighted[data-tag="agile"],
+        .tag.highlighted[data-tag="bi-tools"],
         .text-highlight.agile {
             background-color: #fd79a8;
         }
@@ -417,7 +427,7 @@
             <div class="filter-buttons">
                 <button class="filter-btn" onclick="toggleFilter('python')">Python</button>
                 <button class="filter-btn" onclick="toggleFilter('sql')">SQL</button>
-                <button class="filter-btn" onclick="toggleFilter('viz')">BI Tools (Looker, Tableau)</button>
+                <button class="filter-btn" onclick="toggleFilter('bi-tools')">BI Tools (Looker, Tableau)</button>
                 <button class="filter-btn" onclick="toggleFilter('cross-functional')">Cross-Functional Collaboration</button>
                 <button class="filter-btn" onclick="toggleFilter('data-analysis')">Data Analysis & Visualization</button>
                 <button class="filter-btn" onclick="toggleFilter('data-reporting')">Data-Driven Decision Making</button>
@@ -427,88 +437,160 @@
 
         <div class="experiences-grid">
             <div class="experience-card">
-                <div class="experience-column-left">
-                    <div class="experience-title">Customer Analytics Intern</div>
-                    <div class="experience-company">GameChanger • Internship • June - August 2025</div>
-                    <div class="experience-description">
-                        <strong><u>Summary</u></strong><br>As the first data hire on the CX team, I built the team's analytical framework from scratch with limited 
-                        technical support and supervision. My work gave PMs a whole new lens into the voice of the customer, and for the first time, 
-                        they have easier time accessing and digesting customer feedback and sentiment to drive their decision-making. <br><br>
+                <div class="experience-title">Customer Analytics Intern</div>
+                <div class="experience-company">GameChanger • Internship • June - August 2025</div>
+                <strong><u>Summary</u></strong><br>As the first data hire on the CX team, I built the team's analytical framework from scratch with limited 
+                technical guidance. Working with CX data, I provided PMs with a whole new lens into the voice of the customer, and for the first time, 
+                they have easier time accessing and digesting customer feedback and sentiment to drive their decision-making. Below outlines the three main projects I focused on.<br><br>
                         
+                <div class="experience-description">
+                    <div class="experience-column-left">
                         <strong><u>Data Visualization & Reporting</u></strong>
-                        <li><strong>🛠️  Tools/Skills:</strong> Looker, Notion, Multi-source* data synthesis</li>
-                        <li><strong>🎯  Main Goal:</strong> Create standardized reporting structure for product teams to self-serve CX data</li>
-                        <li><strong>📦  Deliverables:</strong> Looker Dashboards + Monthly Report Frameworks, one for each 9 product teams</li>
-                        <li><strong>🌟 My Impact:</strong> Help PMs integrated Voice of the User (user needs, expectations, etc) into decision-making processes</li>
-                        <li class="process-item" onclick="toggleProcess()">
+                        <table>
+                            <tr>
+                                <td style="width: 125px;">🛠️ Tools/Skills</td>
+                                <td>Looker, Notion, Multi-source* data synthesis</td>
+                            </tr>
+                            <tr>
+                                <td>🎯 Main Goal</td>
+                                <td>Create standardized reporting structure for product teams to self-serve CX data</td>
+                            </tr>
+                            <tr>
+                                <td>📦 Deliverables</td>
+                                <td>Real-Time Looker Dashboards + Monthly Report Frameworks, one for each 9 product teams</td>
+                            </tr>
+                            <tr>
+                                <td>🌟 My Impact</td>
+                                <td>Helped PMs integrate Voice of the User (user needs, expectations, etc) into decision-making</td>
+                            </tr>
+                        </table>
+                        <div class="process-item" onclick="toggleProcess()">
                             <div class="process-toggle">
-                                <strong>🪜  My Process</strong>:
+                                🪜 My Process
                                 <svg class="arrow" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
                             </div>
-                            <div class="process-details" id="processDetails">
+                            <div class="process-details" id="processDetails1">
                                 <blockquote>
                                     <li>Sat with each product team's leadership (PM, Engineering, Designer) to understand their needs</li>
                                     <li>Customized Looker KPI dashboards for each of the 9 product teams; trained CX specialists to maintain it</li>
-                                    <li>Developed a monthly report framework for CX specialists to synthesize insights from multiple data sources* </li>
+                                    <li>Developed a monthly report framework for CX specialists to synthesize insights from multiple data sources*</li>
                                 </blockquote>
                             </div>
-                        </li>
-                        
-                        
-                        
-                        <br>
-                        <u>Ad-Hoc & Deep Dives:</u>
-                        <li>⭐️ Goal: Do advanced analytics on CX data for product teams, which previously was not done every before</li>
-                        <li>🪜 My Process: , including customer feedback from A/B experiments and sentiment NPS from support tickets & community forums</li>
-                        <blockquote>
-                            <li>Collaborated with each product team's leadership (PM, Engineering, Designer) to understand their needs</li>
-                            <li>Customized Looker KPI dashboards for each of the 9 product teams; trained CX specialists to maintain it</li>
-                            <li>Developed a monthly report framework for CX specialists to synthesize insights from multiple data sources* </li>
-                        </blockquote>
-                        <li>🎯 Outcome: Presented user funnel data findings during Q3 planning sessions to PMs, guiding roadmaps</li>
-                        <br>
-                        <u>User Interaction Analysis (Research):</u>
-                        <li>⭐️ Goal: Transform CX from reactive ticket resolution to proactive user experience optimization by understanding the complete user journey behind support escalations.</li>
-                        <li>🪜 My Process:</li>
-                        <blockquote>
-                            <li></li>
-                            <li>Customized Looker KPI dashboards for each of the 9 product teams; trained CX specialists to maintain it</li>
-                            <li>Developed a monthly report framework/template for CX specialists to synthesize data insights</li>
-                        </blockquote>
-                        <li>🎯 Outcome: Successfully integrated Voice of the User (user needs, expectations, etc) into decision-making processes, shaping 3 iterations of Q2 sprint OKRs</li>
-                        
-
-
+                        </div>
                     </div>
-                    <div class="experience-tags">
-                        <span class="tag" data-tag="user-research">User Research</span>
-                        <span class="tag" data-tag="data-analysis">Data Analysis</span>
+
+                    <div class="experience-column-right">
+                        <br>
+                        <div class="note">* Sources including Zendesk tickets, GA4, Microsoft Clarity, App Reviews, Reddit Forum, Facebook Group/Messages, etc.</div>
+                        <div><a href="files/Activators_Dashboard.pdf" target="_blank">Looker Dashboard Ex.</a></div>
+                        <div><a href="files/Hackathon_Search.pdf" target="_blank">Monthly Report Example</a></div>
+                    </div>
+                </div>
+
+
+                <div class="experience-description">
+                    <div class="experience-column-left">
+                        <strong><u>Ad-Hoc & Deep Dives</u></strong>
+                        <table>
+                            <tr>
+                                <td style="width: 125px;">🛠️ Tools/Skills</td>
+                                <td>Python, SQL, Sentiment Analysis (NLP)</td>
+                            </tr>
+                            <tr>
+                                <td>🎯 Main Goal</td>
+                                <td>Introduced advanced CX data analytics capabilities to product teams, filling a critical data gap for PMs</td>
+                            </tr>
+                            <tr>
+                                <td>📦 Deliverables</td>
+                                <td><li>Averaged 3 ad-hoc analyses per sprint; contributed to "deep dive" sections of monthly reports</li>
+                                    <li>Analyses included user sentiment analysis and customer feedback on A/B experimentations</li></td>
+                            </tr>
+                            <tr>
+                                <td>🌟 My Impact</td>
+                                <td>Helped product teams with Q2 short-term planning, redefining OKRs for 3 sprint iterations</td>
+                            </tr>
+                        </table>
+                        <div class="process-item" onclick="toggleProcess()">
+                            <div class="process-toggle">
+                                🪜 My Process
+                                <svg class="arrow" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+                            </div>
+                            <div class="process-details" id="processDetails2">
+                                <blockquote>
+                                    <li>Implement NLP packages to analyze sentiment analysis</li>
+                                </blockquote>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="experience-column-right">
+                        <br>
+                        <div><a href="files/Hackathon_Search.pdf" target="_blank">Ad-Hoc Deep Dive Ex.</a></div>
+                    </div>
+                </div>
+
+
+                <div class="experience-description">
+                    <div class="experience-column-left">
+                        <strong><u>CX User Interaction Analysis (Research & Proposal)</u></strong>
+                        <table>
+                            <tr>
+                                <td style="width: 125px;">🛠️ Tools/Skills</td>
+                                <td>Python, SQL, Snowflake, Fivetran ETL, User Journey Mapping, Funnel Analysis</td>
+                            </tr>
+                            <tr>
+                                <td>🎯 Main Goal</td>
+                                <td>Transform CX's role into proactively shaping better user experiences using insights from beyond retroactively solving tickets</td>
+                            </tr>
+                            <tr>
+                                <td>📦 Deliverables</td>
+                                <td><li>Full user journey mapping (in-app interaction → friction point → support) for top 10 ticket themes</li>
+                                    <li>Additional: Completed end-to-end problem solving for one of the top friction point duing Hackathon</li></td>
+                            </tr>
+                            <tr>
+                                <td>🌟 My Impact</td>
+                                <td>Helped product teams with Q3 long-term planning, shaping roadmaps to address users' unmet needs</td>
+                            </tr>
+                        </table>
+                        <div class="process-item" onclick="toggleProcess()">
+                            <div class="process-toggle">
+                                🪜 My Process
+                                <svg class="arrow" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+                            </div>
+                            <div class="process-details" id="processDetails3">
+                                <blockquote>
+                                    <li>Analyzed 360M+ monthly Snowplow events (Python & SQL) to investigate high-ticket volume issues, isolating pain points in user sessions.</li>
+                                    <li>Quantified silent struggles by cross-referencing help center activity with Snowplow data, uncovering underreported friction points (top 10 CX issues).</li>
+                                    <li>Shifted roadmap priorities for 3 product teams, moving focus from "nice-to-have" features to addressing critical user pain points.</li>
+
+                                </blockquote>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="experience-column-right">
+                        <br>
+                        <div><a href="files/Customer_Journey_Analysis.pdf" target="_blank">Customer Journey Analysis Research Draft</a></div>
+                        <div><a href="files/Hackathon_Search.pdf" target="_blank">Hackathon Full Summary</a></div>
+                    </div>
+                </div>
+
+                <div class="experience-tags">
+                        <span class="tag" data-tag="python">User Research</span>
+                        <span class="tag" data-tag="sql">Data Analysis</span>
                         <span class="tag" data-tag="cross-functional">Cross-Functional Collaboration</span>
-                        <span class="tag" data-tag="agile">Agile</span>
                         <span class="tag" data-tag="product-strategy">Product Strategy</span>
                     </div>
                 </div>
-                <div class="experience-column-right">
-                    <div class="note">* Sources including Zendesk, GA4, App Reviews, Reddit Forum, Facebook Group/Messages, etc.</div>
-                    <br>
-                    <div><a href="files/Activators_Dashboard.pdf" target="_blank">Looker Dashboard Ex.</a></div>
-                    <div><a href="files/Hackathon_Search.pdf" target="_blank">Monthly Report Example</a></div>
-                    <br>
-                    <div><a href="files/Hackathon_Search.pdf" target="_blank">Ad-Hoc Deep Dive Ex.</a></div>
-                    <br>
-                    <div><a href="files/Customer_Journey_Analysis.pdf" target="_blank">Customer Journey Analysis Research Draft</a></div>
-                    <div><a href="files/Customer_Journey_Analysis.pdf" target="_blank">Hackathon Full Summary</a></div>
-                    <br>
-                    <div><a href="https://gc.com/" target="_blank">About GameChanger ↗</a></div>
-                </div>
+                
                 
             </div>
 
             <div class="experience-card">
-                <div class="experience-column-left">
-                    <div class="experience-title">Data Analyst</div>
-                    <div class="experience-company">UCSB Technology Management • Part-Time • Ongoing</div>
-                    <div class="experience-description">
+                <div class="experience-title">Data Analyst</div>
+                <div class="experience-company">UCSB Technology Management • Part-Time • Ongoing</div>
+                <div class="experience-description">
+                        <div class="experience-column-left">
                         <li>⭐️ Motivation: Improve data processing and operation of Undergrad division to help my friends and classmates</li>
                         <li>💪 Achievements:</li>
                         <blockquote>
@@ -517,17 +599,15 @@
                             <li>Developed a monthly report framework/template for CX specialists to synthesize data insights</li>
                         </blockquote>
                     </div>
-                    <div class="experience-tags">
-                        <span class="tag" data-tag="user-research">User Research</span>
-                        <span class="tag" data-tag="data-analysis">Data Analysis</span>
-                        <span class="tag" data-tag="cross-functional">Cross-Functional Collaboration</span>
-                        <span class="tag" data-tag="agile">Agile</span>
-                        <span class="tag" data-tag="product-strategy">Product Strategy</span>
-                    </div>
                 </div>
-                <div class="experience-column-right">
-                    
+                <div class="experience-tags">
+                    <span class="tag" data-tag="user-research">User Research</span>
+                    <span class="tag" data-tag="data-analysis">Data Analysis</span>
+                    <span class="tag" data-tag="cross-functional">Cross-Functional Collaboration</span>
+                    <span class="tag" data-tag="agile">Agile</span>
+                    <span class="tag" data-tag="product-strategy">Product Strategy</span>
                 </div>
+
                 
             </div>
 
@@ -620,9 +700,9 @@
 
         function getKeywordsForFilter(filterTag) {
             const keywordMap = {
-                'user-research': ['pain point', 'user interview', 'user satisfaction'],
-                'data-analysis': ['KPI Looker Dashboard', 'monthly reporting', 'customer journey analysis', 'customer sentiment analysis', 'Analyzed user behavior data'],
-                'agile': ['Agile'],
+                'python': ['Python'],
+                'bi-tools': ['Looker', 'PowerBI'],
+                'user-journey': ['user journey mapping', 'funnel analysis'],
                 'cross-functional': ['cross-functional', 'product teams'],
                 'product-strategy': ['product planning sessions', 'guide sprint cycle OKRs'],
                 'experiments': ['A/B testing'],
@@ -634,8 +714,10 @@
             return keywordMap[filterTag] || [];
         }
         function toggleProcess() {
-            const details = document.getElementById('processDetails');
-            const arrow = document.querySelector('.arrow');
+            const processId = event.currentTarget.querySelector('.process-details').id;
+            const details = document.getElementById(processId);
+            const arrow = event.currentTarget.querySelector('.arrow');
+            
             
             details.classList.toggle('expanded');
             arrow.classList.toggle('expanded');
@@ -644,20 +726,3 @@
 </body>
 </html>
 
-
-
-
-
-<!--<li class="process-item" onclick="toggleProcess()">
-                            <div class="process-toggle">
-                                My Process
-                                <svg class="arrow" viewBox=""><path d="M5 10l5 5 5-5z"/></svg>
-                            </div>
-                            <div class="process-details" id="processDetails">
-                                <ul>
-                                    <li>Collaborated with each product team's leadership (PM, Engineering, Designer) to understand their needs</li>
-                                    <li>Customized Looker KPI dashboards for each of the 9 product teams; trained CX specialists to maintain it</li>
-                                    <li>Developed a monthly report framework/template for CX specialists to synthesize data insights</li>
-                                </ul>
-                            </div>
-                        </li>-->
