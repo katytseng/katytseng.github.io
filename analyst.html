@@ -132,9 +132,45 @@
         }
 
         .filter-btn.active {
-            background-color: #111;
             color: white;
-            border-color: #111;
+            font-weight: 500;
+        }
+
+        /* Filter button colors when active */
+        .filter-btn.active[data-filter="python"] {
+            background-color: #74b9ff;
+            border-color: #74b9ff;
+        }
+
+        .filter-btn.active[data-filter="sql"] {
+            background-color: #67d68c;
+            border-color: #67d68c;
+        }
+
+        .filter-btn.active[data-filter="bi-tools"] {
+            background-color: #fd79a8;
+            border-color: #fd79a8;
+        }
+
+        .filter-btn.active[data-filter="cross-functional"] {
+            background-color: #e7cc00;
+            border-color: #e7cc00;
+            color: #2d3436;
+        }
+
+        .filter-btn.active[data-filter="data-analysis"] {
+            background-color: #a29bfe;
+            border-color: #a29bfe;
+        }
+
+        .filter-btn.active[data-filter="data-reporting"] {
+            background-color: #ebab60;
+            border-color: #ebab60;
+        }
+
+        .filter-btn.active[data-filter="product-strategy"] {
+            background-color: #e17055;
+            border-color: #e17055;
         }
 
         .experiences-grid {
@@ -348,17 +384,17 @@
 
         /* Tag colors */
         .tag.highlighted[data-tag="python"],
-        .text-highlight.user-research {
+        .text-highlight.python {
             background-color: #74b9ff;
         }
 
         .tag.highlighted[data-tag="sql"],
-        .text-highlight.data-analysis {
+        .text-highlight.sql {
             background-color: #67d68c;
         }
 
         .tag.highlighted[data-tag="bi-tools"],
-        .text-highlight.agile {
+        .text-highlight.bi-tools {
             background-color: #fd79a8;
         }
 
@@ -367,19 +403,19 @@
             background-color: #e7cc00;
         }
 
-        .tag.highlighted[data-tag="product-strategy"],
-        .text-highlight.product-strategy {
+        .tag.highlighted[data-tag="data-analysis"],
+        .text-highlight.data-analysis {
             background-color: #a29bfe;
-        }
-
-        .tag.highlighted[data-tag="experiments"],
-        .text-highlight.experiments {
-            background-color: #e17055;
         }
 
         .tag.highlighted[data-tag="data-reporting"],
         .text-highlight.data-reporting {
             background-color: #ebab60;
+        }
+
+        .tag.highlighted[data-tag="product-strategy"],
+        .text-highlight.product-strategy {
+            background-color: #e17055;
         }
 
         @media (max-width: 768px) {
@@ -409,29 +445,18 @@
                 <div class="div"><strong>Agile Foundations - Project Management Institute</strong> (August 2025) 
                     <a href="files/AgileFoundations.pdf" target="_blank">(view ↗)</a></div>
             </div>
-            <!---<div class="cert-card">
-                <div class="cert-badge"><img src="images/powerbi.png" alt="Google Logo"></div>
-                <div class="div"><strong>Microsoft Power BI Data Analyst Associate</strong> (September 2025) 
-                    <a href="https://skillshop.credential.net/11070c51-2a3e-4e44-b1b8-0df7c069c7dd#acc.nBIhV0Li" target="_blank">(view ↗)</a></div>
-            </div>-->
-            
-            
         </div>
-        <!---<div>
-            Focus: How users interact with the product itself (features, funnels, retention, engagement, behavior).<br>
-            Audience: Product managers, engineers, designers. <br>
-            Goal: Guide product development decisions, improve user experience, and measure feature success.
-        </div>-->
+
         <div class="filter-section">
-            <label class="filter-label">Filter by skills:</label>
+            <label class="filter-label">Highlight Skills:</label>
             <div class="filter-buttons">
-                <button class="filter-btn" onclick="toggleFilter('python')">Python</button>
-                <button class="filter-btn" onclick="toggleFilter('sql')">SQL</button>
-                <button class="filter-btn" onclick="toggleFilter('bi-tools')">BI Tools (Looker, Tableau)</button>
-                <button class="filter-btn" onclick="toggleFilter('cross-functional')">Cross-Functional Collaboration</button>
-                <button class="filter-btn" onclick="toggleFilter('data-analysis')">Data Analysis & Visualization</button>
-                <button class="filter-btn" onclick="toggleFilter('data-reporting')">Data-Driven Decision Making</button>
-                <button class="filter-btn" onclick="toggleFilter('product-strategy')">Product Strategy</button>
+                <button class="filter-btn" data-filter="python" onclick="toggleFilter('python')">Python</button>
+                <button class="filter-btn" data-filter="sql" onclick="toggleFilter('sql')">SQL</button>
+                <button class="filter-btn" data-filter="bi-tools" onclick="toggleFilter('bi-tools')">BI Tools (Looker, Tableau)</button>
+                <button class="filter-btn" data-filter="cross-functional" onclick="toggleFilter('cross-functional')">Cross-Functional Collaboration</button>
+                <button class="filter-btn" data-filter="data-analysis" onclick="toggleFilter('data-analysis')">Data Analysis & Visualization</button>
+                <button class="filter-btn" data-filter="data-reporting" onclick="toggleFilter('data-reporting')">Data-Driven Decision Making</button>
+                <button class="filter-btn" data-filter="product-strategy" onclick="toggleFilter('product-strategy')">Product Strategy</button>
             </div>
         </div>
 
@@ -467,7 +492,7 @@
                         <div class="process-item" onclick="toggleProcess()">
                             <div class="process-toggle">
                                 🪜 My Process
-                                <svg class="arrow" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+                                <svg class="arrow" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" fill="none"/></svg>
                             </div>
                             <div class="process-details" id="processDetails1">
                                 <blockquote>
@@ -513,7 +538,7 @@
                         <div class="process-item" onclick="toggleProcess()">
                             <div class="process-toggle">
                                 🪜 My Process
-                                <svg class="arrow" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+                                <svg class="arrow" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" fill="none"/></svg>
                             </div>
                             <div class="process-details" id="processDetails2">
                                 <blockquote>
@@ -545,7 +570,7 @@
                             <tr>
                                 <td>📦 Deliverables</td>
                                 <td><li>Full user journey mapping (in-app interaction → friction point → support) for top 10 ticket themes</li>
-                                    <li>Additional: Completed end-to-end problem solving for one of the top friction point duing Hackathon</li></td>
+                                    <li>Additional: Completed end-to-end problem solving a top friction point duing Hackathon</li></td>
                             </tr>
                             <tr>
                                 <td>🌟 My Impact</td>
@@ -555,14 +580,13 @@
                         <div class="process-item" onclick="toggleProcess()">
                             <div class="process-toggle">
                                 🪜 My Process
-                                <svg class="arrow" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+                                <svg class="arrow" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" fill="none"/></svg>
                             </div>
                             <div class="process-details" id="processDetails3">
                                 <blockquote>
                                     <li>Analyzed 360M+ monthly Snowplow events (Python & SQL) to investigate high-ticket volume issues, isolating pain points in user sessions.</li>
                                     <li>Quantified silent struggles by cross-referencing help center activity with Snowplow data, uncovering underreported friction points (top 10 CX issues).</li>
                                     <li>Shifted roadmap priorities for 3 product teams, moving focus from "nice-to-have" features to addressing critical user pain points.</li>
-
                                 </blockquote>
                             </div>
                         </div>
@@ -570,59 +594,51 @@
 
                     <div class="experience-column-right">
                         <br>
-                        <div><a href="files/Customer_Journey_Analysis.pdf" target="_blank">Customer Journey Analysis Research Draft</a></div>
+                        <div><a href="files/Customer_Journey_Analysis.pdf" target="_blank">CX Journey Research Draft</a></div>
                         <div><a href="files/Hackathon_Search.pdf" target="_blank">Hackathon Full Summary</a></div>
                     </div>
                 </div>
 
                 <div class="experience-tags">
-                        <span class="tag" data-tag="python">User Research</span>
-                        <span class="tag" data-tag="sql">Data Analysis</span>
-                        <span class="tag" data-tag="cross-functional">Cross-Functional Collaboration</span>
-                        <span class="tag" data-tag="product-strategy">Product Strategy</span>
-                    </div>
+                    <span class="tag" data-tag="python">Python</span>
+                    <span class="tag" data-tag="sql">SQL</span>
+                    <span class="tag" data-tag="bi-tools">BI Tools</span>
+                    <span class="tag" data-tag="cross-functional">Cross-Functional Collaboration</span>
+                    <span class="tag" data-tag="data-analysis">Data Analysis</span>
+                    <span class="tag" data-tag="data-reporting">Data Reporting</span>
+                    <span class="tag" data-tag="product-strategy">Product Strategy</span>
                 </div>
-                
-                
             </div>
 
             <div class="experience-card">
                 <div class="experience-title">Data Analyst</div>
                 <div class="experience-company">UCSB Technology Management • Part-Time • Ongoing</div>
                 <div class="experience-description">
-                        <div class="experience-column-left">
+                    <div class="experience-column-left">
                         <li>⭐️ Motivation: Improve data processing and operation of Undergrad division to help my friends and classmates</li>
                         <li>💪 Achievements:</li>
                         <blockquote>
-                            <li>Collaborated with each product team's leadership (PM, Engineering, Designer) to understand their needs</li>
-                            <li>Customized Looker KPI dashboards for each of the 9 product teams; trained CX specialists to maintain it</li>
-                            <li>Developed a monthly report framework/template for CX specialists to synthesize data insights</li>
+                            <li>Built automated reporting systems using SQL and Python for student analytics</li>
+                            <li>Collaborated with academic advisors and department staff to streamline data workflows</li>
+                            <li>Created dashboards for tracking student progress and program effectiveness</li>
                         </blockquote>
                     </div>
                 </div>
                 <div class="experience-tags">
-                    <span class="tag" data-tag="user-research">User Research</span>
-                    <span class="tag" data-tag="data-analysis">Data Analysis</span>
+                    <span class="tag" data-tag="python">Python</span>
+                    <span class="tag" data-tag="sql">SQL</span>
                     <span class="tag" data-tag="cross-functional">Cross-Functional Collaboration</span>
-                    <span class="tag" data-tag="agile">Agile</span>
-                    <span class="tag" data-tag="product-strategy">Product Strategy</span>
+                    <span class="tag" data-tag="data-analysis">Data Analysis</span>
+                    <span class="tag" data-tag="data-reporting">Data Reporting</span>
                 </div>
-
-                
             </div>
-
-            
-
         </div>
+        
         <div class="footer">
             <a href="mailto:katy.tseng12@gmail.com">📧 Email</a>
             <a href="https://www.linkedin.com/in/katy-tseng/">💼 LinkedIn</a>
         </div>
     </div>
-
-
-
-            
 
     <script>
         // Get query params
@@ -632,14 +648,14 @@
         const role = params.get("role-title");
 
         if (role) {
-        // Replace hyphens with spaces + capitalize nicely
-        const formatted = role.replace(/-/g, " ")
-                                .replace(/\b\w/g, c => c.toUpperCase());
+            // Replace hyphens with spaces + capitalize nicely
+            const formatted = role.replace(/-/g, " ")
+                                    .replace(/\b\w/g, c => c.toUpperCase());
 
-        document.getElementById("role-title").textContent = formatted;
+            document.getElementById("role-title").textContent = formatted;
 
-        // Also update the tab title
-        document.title = formatted + " - Katy's Portfolio";
+            // Also update the tab title
+            document.title = formatted + " - Katy's Portfolio";
         }
 
         const activeFilters = new Set();
@@ -663,13 +679,17 @@
             
             experienceCards.forEach(card => {
                 const tags = card.querySelectorAll('.tag');
-                const description = card.querySelector('.experience-description');
                 
-                // Reset description
-                if (!description.dataset.originalText) {
-                    description.dataset.originalText = description.innerHTML;
-                }
-                description.innerHTML = description.dataset.originalText;
+                // Get all text containers that should be highlighted
+                const textContainers = card.querySelectorAll('.experience-description, .experience-column-left, table td, blockquote li');
+                
+                // Reset all text containers
+                textContainers.forEach(container => {
+                    if (!container.dataset.originalText) {
+                        container.dataset.originalText = container.innerHTML;
+                    }
+                    container.innerHTML = container.dataset.originalText;
+                });
                 
                 // Handle tag highlighting
                 tags.forEach(tag => {
@@ -683,41 +703,41 @@
                 
                 // Handle description text highlighting
                 if (activeFilters.size > 0) {
-                    let descriptionHTML = description.innerHTML;
-                    
-                    activeFilters.forEach(filterTag => {
-                        const keywords = getKeywordsForFilter(filterTag);
-                        keywords.forEach(keyword => {
-                            const regex = new RegExp(`\\b(${keyword})\\b`, 'gi');
-                            descriptionHTML = descriptionHTML.replace(regex, `<span class="text-highlight ${filterTag}">$1</span>`);
+                    textContainers.forEach(container => {
+                        let containerHTML = container.innerHTML;
+                        
+                        activeFilters.forEach(filterTag => {
+                            const keywords = getKeywordsForFilter(filterTag);
+                            keywords.forEach(keyword => {
+                                const regex = new RegExp(`\\b(${keyword})\\b`, 'gi');
+                                containerHTML = containerHTML.replace(regex, `<span class="text-highlight ${filterTag}">$1</span>`);
+                            });
                         });
+                        
+                        container.innerHTML = containerHTML;
                     });
-                    
-                    description.innerHTML = descriptionHTML;
                 }
             });
         }
 
         function getKeywordsForFilter(filterTag) {
             const keywordMap = {
-                'python': ['Python'],
-                'bi-tools': ['Looker', 'PowerBI'],
-                'user-journey': ['user journey mapping', 'funnel analysis'],
-                'cross-functional': ['cross-functional', 'product teams'],
-                'product-strategy': ['product planning sessions', 'guide sprint cycle OKRs'],
-                'experiments': ['A/B testing'],
-                'data-reporting': ['mobile behavior data', 'qualitative data', 'Presented findings', 'voices of the customers']
+                'python': ['Python', 'NLP', 'sentiment analysis'],
+                'sql': ['SQL', 'Snowflake', 'query', 'data warehouses'],
+                'bi-tools': ['Looker', 'PowerBI dashboards', 'KPI dashboards'],
+                'cross-functional': ['cross-functional', 'product teams', 'collaborated', 'leadership', 'PM', 'Engineering', 'Designer', 'teams'],
+                'data-analysis': ['analytics', 'analysis', 'insights', 'sentiment analysis', 'deep dives', 'analytical framework'],
+                'data-reporting': ['reporting', 'dashboards', 'monthly report', 'framework', 'standardized reporting'],
+                'product-strategy': ['product strategy', 'roadmap', 'OKRs', 'planning', 'decision-making', 'user needs', 'roadmaps']
             };
-
-        
             
             return keywordMap[filterTag] || [];
         }
+
         function toggleProcess() {
             const processId = event.currentTarget.querySelector('.process-details').id;
             const details = document.getElementById(processId);
             const arrow = event.currentTarget.querySelector('.arrow');
-            
             
             details.classList.toggle('expanded');
             arrow.classList.toggle('expanded');
@@ -725,4 +745,3 @@
     </script>
 </body>
 </html>
-
