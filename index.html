@@ -22,12 +22,12 @@
         .container {
             max-width: 1000px;
             margin: 0 auto;
-            padding: 2rem 20px;
+            padding: 1rem 15px;
         }
 
         .back-btn {
             display: inline-block;
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
             color: #666;
             text-decoration: none;
             font-size: 0.9rem;
@@ -41,15 +41,15 @@
 
         .role-header {
             text-align: center;
-            margin-bottom: 3rem;
-            padding: 2rem 5rem;
+            margin-bottom: 2rem;
+            padding: 1.5rem 1rem;
             background: white;
             border-radius: 16px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.04);
         }
 
         .intro-text {
-            font-size: 1.1rem;
+            font-size: 1rem;
             color: #555;
             line-height: 1.6;
             animation: slideUpFade 0.8s ease-out;
@@ -76,20 +76,24 @@
             padding: 0.5rem;
             box-shadow: 0 2px 8px rgba(0,0,0,0.04);
             border: 1px solid #e9ecef;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
         }
 
         .tab-button {
             flex: 1;
+            min-width: 120px;
             max-width: 300px;
-            padding: 1rem 2rem;
+            padding: 0.8rem 1rem;
             background: none;
             border: none;
             border-radius: 8px;
-            font-size: 1rem;
+            font-size: 0.9rem;
             font-weight: 500;
             cursor: pointer;
             transition: all 0.3s ease;
             color: #666;
+            white-space: nowrap;
         }
 
         .tab-button.active {
@@ -155,13 +159,13 @@
 
         .timeline {
             position: relative;
-            margin: 3rem 0;
+            margin: 2rem 0;
         }
 
         .timeline::before {
             content: '';
             position: absolute;
-            left: 40px;
+            left: 15px;
             top: 0;
             bottom: 0;
             width: 2px;
@@ -171,15 +175,15 @@
         .timeline-item {
             position: relative;
             margin-bottom: 2rem;
-            padding-left: 80px;
+            padding-left: 50px;
         }
 
         .timeline-marker {
             position: absolute;
-            left: 32px;
+            left: 7px;
             top: 20px;
-            width: 18px;
-            height: 18px;
+            width: 16px;
+            height: 16px;
             background: #0066cc;
             border: 3px solid white;
             border-radius: 50%;
@@ -187,21 +191,21 @@
         }
 
         .timeline-date {
-            position: absolute;
-            left: -60px;
-            top: 15px;
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             color: #666;
             font-weight: 500;
-            writing-mode: vertical-lr;
-            text-orientation: mixed;
-            transform: rotate(180deg);
+            margin-bottom: 0.5rem;
+            text-align: left;
+            background: #f0f8ff;
+            padding: 0.3rem 0.6rem;
+            border-radius: 6px;
+            display: inline-block;
         }
 
         .experience-card {
             background: white;
             border-radius: 12px;
-            padding: 1.5rem;
+            padding: 1.2rem;
             box-shadow: 0 2px 8px rgba(0,0,0,0.04);
             border: 1px solid #e9ecef;
             transition: all 0.3s ease;
@@ -214,40 +218,39 @@
 
         .experience-header {
             display: flex;
-            justify-content: space-between;
             align-items: flex-start;
             margin-bottom: 1rem;
+            gap: 0.8rem;
             flex-wrap: wrap;
-            gap: 1rem;
         }
 
         .experience-title-section {
             flex: 1;
+            min-width: 200px;
         }
 
         .experience-title {
-            font-size: 1.3rem;
+            font-size: 1.1rem;
             font-weight: 700;
             color: #111;
-            margin-bottom: 0rem;
-            display: flex;
-            align-items: center;
-            gap: 0.2rem;
+            margin-bottom: 0.2rem;
+            line-height: 1.3;
         }
 
         .company-logo {
-            width: 50px;
-            height: 50px;
-            border-radius: 10px;
+            width: 45px;
+            height: 45px;
+            border-radius: 8px;
             object-fit: contain;
             background: white;
             border: 1px solid #e9ecef;
-            
+            flex-shrink: 0;
         }
 
         .experience-company {
             color: #0066cc;
             font-weight: 500;
+            font-size: 0.9rem;
         }
 
         .experience-type {
@@ -255,14 +258,16 @@
             color: #0066cc;
             padding: 4px 8px;
             border-radius: 6px;
-            font-size: 0.75rem;
+            font-size: 0.7rem;
             font-weight: 500;
+            align-self: flex-start;
+            white-space: nowrap;
         }
 
         .impact-metrics {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1rem;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 0.8rem;
             margin: 1rem 0;
             padding: 1rem;
             background: #f8f9fa;
@@ -274,31 +279,32 @@
         }
 
         .metric-value {
-            font-size: 1.5rem;
+            font-size: 1.2rem;
             font-weight: 700;
             color: #0066cc;
             display: block;
         }
 
         .metric-label {
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             color: #666;
             margin-top: 0.2rem;
+            line-height: 1.3;
         }
 
         .skills-row {
             display: flex;
             flex-wrap: wrap;
-            gap: 0.5rem;
+            gap: 0.4rem;
             margin: 1rem 0;
         }
 
         .skill-tag {
             background: #e9ecef;
             color: #495057;
-            padding: 4px 12px;
-            border-radius: 16px;
-            font-size: 0.8rem;
+            padding: 3px 10px;
+            border-radius: 14px;
+            font-size: 0.75rem;
             font-weight: 500;
         }
 
@@ -316,6 +322,7 @@
             color: #495057;
             line-height: 1.6;
             margin-bottom: 1rem;
+            font-size: 0.9rem;
         }
 
         .expand-toggle {
@@ -324,9 +331,9 @@
             gap: 0.5rem;
             color: #0066cc;
             cursor: pointer;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             font-weight: 500;
-            padding: 0.5rem 0;
+            padding: 0.8rem 0;
             transition: all 0.3s ease;
             border: none;
             background: none;
@@ -353,7 +360,7 @@
         }
 
         .detailed-content.expanded {
-            max-height: 1500px;
+            max-height: 2000px;
         }
 
         .project-grid {
@@ -374,27 +381,32 @@
             justify-content: space-between;
             align-items: flex-start;
             margin-bottom: 0.5rem;
+            flex-wrap: wrap;
+            gap: 0.5rem;
         }
 
         .project-title {
             font-weight: 600;
             color: #111;
             margin-bottom: 0.3rem;
+            font-size: 0.95rem;
         }
 
         .project-links {
             display: flex;
-            gap: 0.5rem;
+            gap: 0.4rem;
+            flex-wrap: wrap;
         }
 
         .project-link {
             background: #e7f3ff;
             color: #0066cc;
-            padding: 4px 8px;
-            border-radius: 6px;
+            padding: 3px 6px;
+            border-radius: 4px;
             text-decoration: none;
-            font-size: 0.75rem;
+            font-size: 0.7rem;
             transition: all 0.3s ease;
+            white-space: nowrap;
         }
 
         .project-link:hover {
@@ -402,16 +414,15 @@
             color: white;
         }
 
-        /* New styles for expandable project details */
         .project-expand-container {
             display: flex;
             justify-content: center;
-            margin: -2rem 0 0.5rem;
+            margin: -1.5rem 0 0.5rem;
         }
 
         .project-expand-btn {
-            width: 30px;
-            height: 30px;
+            width: 28px;
+            height: 28px;
             border-radius: 50%;
             background: #0066cc;
             border: none;
@@ -420,7 +431,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             transition: all 0.3s ease;
             box-shadow: 0 2px 8px rgba(0,102,204,0.3);
         }
@@ -452,8 +463,8 @@
         .project-details {
             display: grid;
             grid-template-columns: auto 1fr;
-            gap: 0.5rem 1rem;
-            font-size: 0.9rem;
+            gap: 0.4rem 0.8rem;
+            font-size: 0.8rem;
             margin-bottom: 1rem;
         }
 
@@ -467,7 +478,7 @@
             padding: 0.5rem;
             background: #f8f9fa;
             border-radius: 6px;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
         }
 
         .project-process ul {
@@ -480,22 +491,24 @@
             color: #555;
         }
 
-        /* Gallery styles */
         .project-gallery {
             display: flex;
-            gap: 1rem;
+            gap: 0.8rem;
             margin: 1rem 0;
             flex-wrap: wrap;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
         }
 
         .gallery-item {
-            width: 120px;
-            height: 80px;
-            border-radius: 8px;
+            width: 100px;
+            height: 70px;
+            border-radius: 6px;
             overflow: hidden;
             border: 1px solid #e9ecef;
             transition: all 0.3s ease;
             cursor: pointer;
+            flex-shrink: 0;
         }
 
         .gallery-item:hover {
@@ -510,70 +523,268 @@
         }
 
         .other-projects {
-            margin: 4rem 0 2rem;
-            padding: 2rem;
+            margin: 3rem 0 2rem;
+            padding: 1.5rem;
             background: white;
             border-radius: 12px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.04);
         }
 
         .other-projects a {
-            margin: 0 10px;
+            margin: 0 8px;
         }
 
         .footer {
-            margin: 4rem 0 2rem;
+            margin: 3rem 0 2rem;
             text-align: center;
-            padding: 2rem;
+            padding: 1.5rem;
             background: white;
             border-radius: 12px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.04);
         }
 
         .footer a {
-            margin: 0 1rem;
+            margin: 0 0.8rem;
             color: #0066cc;
             text-decoration: none;
             font-weight: 500;
+            display: inline-block;
+            margin-bottom: 0.5rem;
         }
 
         .footer a:hover {
             color: #0052a3;
         }
 
+        /* Mobile-specific styles */
         @media (max-width: 768px) {
-            .timeline-date {
-                position: static;
-                writing-mode: horizontal-tb;
-                transform: none;
-                margin-bottom: 0.5rem;
-                text-align: left;
+            .container {
+                padding: 1rem 10px;
             }
 
-            .timeline-item {
-                padding-left: 60px;
+            .role-header {
+                padding: 1.2rem 0.8rem;
+                margin-bottom: 1.5rem;
+            }
+
+            .intro-text {
+                font-size: 0.9rem;
+            }
+
+            .tab-navigation {
+                margin-bottom: 1.5rem;
+                padding: 0.3rem;
+            }
+
+            .tab-button {
+                padding: 0.7rem 0.8rem;
+                font-size: 0.8rem;
+                min-width: 100px;
+            }
+
+            .timeline {
+                margin: 1.5rem 0;
             }
 
             .timeline::before {
-                left: 20px;
+                left: 10px;
+            }
+
+            .timeline-item {
+                padding-left: 35px;
+                margin-bottom: 1.5rem;
             }
 
             .timeline-marker {
-                left: 12px;
+                left: 2px;
+                width: 14px;
+                height: 14px;
+            }
+
+            .timeline-date {
+                font-size: 0.7rem;
+                padding: 0.2rem 0.5rem;
+            }
+
+            .experience-card {
+                padding: 1rem;
             }
 
             .experience-header {
                 flex-direction: column;
                 align-items: flex-start;
+                gap: 0.6rem;
+            }
+
+            .experience-title {
+                font-size: 1rem;
+            }
+
+            .company-logo {
+                width: 40px;
+                height: 40px;
             }
 
             .impact-metrics {
                 grid-template-columns: 1fr;
+                gap: 0.6rem;
+                padding: 0.8rem;
+            }
+
+            .metric-value {
+                font-size: 1.1rem;
+            }
+
+            .metric-label {
+                font-size: 0.7rem;
+            }
+
+            .skills-row {
+                gap: 0.3rem;
+            }
+
+            .skill-tag {
+                font-size: 0.7rem;
+                padding: 2px 8px;
+            }
+
+            .summary-text {
+                font-size: 0.85rem;
+            }
+
+            .expand-toggle {
+                font-size: 0.8rem;
+                padding: 0.6rem 0;
+            }
+
+            .project-title {
+                font-size: 0.9rem;
+            }
+
+            .project-links {
+                gap: 0.3rem;
+            }
+
+            .project-link {
+                font-size: 0.65rem;
+                padding: 2px 5px;
+            }
+
+            .project-details {
+                font-size: 0.75rem;
+                gap: 0.3rem 0.6rem;
+            }
+
+            .project-process {
+                font-size: 0.75rem;
+                padding: 0.4rem;
+            }
+
+            .project-gallery {
+                gap: 0.6rem;
+            }
+
+            .gallery-item {
+                width: 80px;
+                height: 60px;
+            }
+
+            .footer {
+                padding: 1.2rem;
+            }
+
+            .footer a {
+                display: block;
+                margin: 0.3rem 0;
+            }
+        }
+
+        /* Extra small screens */
+        @media (max-width: 480px) {
+            .container {
+                padding: 0.8rem 8px;
+            }
+
+            .role-header {
+                padding: 1rem 0.6rem;
+            }
+
+            .intro-text {
+                font-size: 0.85rem;
             }
 
             .tab-button {
-                padding: 0.8rem 1rem;
-                font-size: 0.9rem;
+                font-size: 0.75rem;
+                padding: 0.6rem 0.6rem;
+                min-width: 90px;
+            }
+
+            .experience-card {
+                padding: 0.8rem;
+            }
+
+            .experience-title {
+                font-size: 0.95rem;
+            }
+
+            .experience-company {
+                font-size: 0.8rem;
+            }
+
+            .summary-text {
+                font-size: 0.8rem;
+            }
+
+            .impact-metrics {
+                padding: 0.6rem;
+            }
+
+            .project-card {
+                padding: 0.8rem;
+            }
+
+            .project-details {
+                grid-template-columns: 1fr;
+                gap: 0.2rem;
+            }
+
+            .project-label {
+                font-weight: 600;
+                margin-bottom: 0.1rem;
+            }
+        }
+
+        /* Landscape mobile */
+        @media (max-width: 768px) and (orientation: landscape) {
+            .impact-metrics {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .project-gallery {
+                justify-content: flex-start;
+            }
+        }
+
+        /* Touch-friendly improvements */
+        @media (pointer: coarse) {
+            .tab-button {
+                min-height: 44px;
+            }
+            
+            .expand-toggle {
+                min-height: 44px;
+            }
+            
+            .project-expand-btn {
+                width: 32px;
+                height: 32px;
+            }
+            
+            .project-link {
+                min-height: 32px;
+                display: inline-flex;
+                align-items: center;
+                padding: 4px 8px;
             }
         }
     </style>
