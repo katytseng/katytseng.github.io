@@ -40,19 +40,97 @@
         }
 
         .role-header {
-            text-align: center;
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
             margin-bottom: 2rem;
-            padding: 1.5rem 1rem;
+            padding: 0.5rem 1.5rem;
             background: white;
-            border-radius: 16px;
+            border-radius: 12px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.04);
         }
 
+        .profile-image-section {
+            flex-shrink: 0;
+        }
+
+        .profile-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #e9ecef;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        .header-content {
+            flex: 1;
+        }
+
         .intro-text {
-            font-size: 1rem;
+            font-size: 0.95rem;
             color: #555;
-            line-height: 1.6;
+            margin-bottom: 1rem;
+            line-height: 1.5;
             animation: slideUpFade 0.8s ease-out;
+        }
+
+        .education-compact {
+            display: flex;
+            gap: 0.8rem;
+            margin-top: 0.8rem;
+        }
+
+        .education-item-compact {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            padding: 0.6rem 0.8rem;
+            background: #f8f9fa;
+            border-radius: 6px;
+            border: 1px solid #e9ecef;
+            transition: all 0.3s ease;
+            flex: 1;
+        }
+
+        .education-item-compact:hover {
+            background: #e9ecef;
+            transform: translateY(-1px);
+        }
+
+        .education-logo-small {
+            width: 50px;
+            height: 50px;
+            border-radius: 4px;
+            object-fit: contain;
+            background: white;
+            border: 1px solid #e9ecef;
+            padding: 3px;
+            flex-shrink: 0;
+        }
+
+        .education-details-compact {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .education-details-compact h4 {
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: #111;
+            margin-bottom: 0.1rem;
+        }
+
+        .education-details-compact p {
+            font-size: 0.7rem;
+            color: #666;
+            margin-bottom: 0.05rem;
+            line-height: 1.2;
+        }
+
+        .education-details-compact .degree {
+            color: #0066cc;
+            font-weight: 500;
         }
 
         @keyframes slideUpFade {
@@ -795,9 +873,37 @@
         <a href="index.html" class="back-btn">Katy Tseng</a>
 
         <div class="role-header">
-            <p class="intro-text"><strong>Hi, I'm Katy 👋</strong><br> I'm passionate about the intersection of people + data + product. <br>
-            I love digging into user interaction data to find what's really driving their behavior. 
-            My CX experience helps me empathize with people and uncover the human story behind the clicks.</p>
+            <div class="profile-image-section">
+                <img src="images/katy.png" alt="Katy Tseng" class="profile-image">
+            </div>
+            
+            <div class="header-content">
+                <p class="intro-text">
+                    <strong style="font-size: 1.3rem; color: #111;">Hi, I'm Katy 👋</strong><br>
+                    I'm passionate about the intersection of people + data.
+                </p>
+                
+                <div class="education-compact">
+                    <div class="education-item-compact">
+                        <img src='images/ucla.jpeg' alt="UCLA Logo" class="education-logo-small">
+                        <div class="education-details-compact">
+                            <h4>University of California - Los Angeles</h4>
+                            <p class="degree">M.S. Business Analytics</p>
+                            <p>Expected December 2027</p>
+                        </div>
+                    </div>
+                    <div class="education-item-compact">
+                        <img src='images/ucsb-logo.jpeg' alt="UCSB Logo" class="education-logo-small">
+                        <div class="education-details-compact">
+                            <h4>University of California - Santa Barbara</h4>
+                            <p class="degree">B.S. Statistics and Data Science</p>
+                            <p>March 2026</p>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+            </div>
         </div>
 
         <!-- Tab Navigation -->
@@ -811,8 +917,9 @@
         <!-- Work Experience Tab -->
         <div id="work-experience" class="tab-content active">
             <div class="timeline">
+
                 <div class="timeline-item">
-                    <div class="timeline-date">ONGOING</div>
+                    <div class="timeline-date">May 2025 - May 2026</div>
                     <div class="timeline-marker"></div>
                     <div class="experience-card">
                         <div class="experience-header">
@@ -891,7 +998,7 @@
 
 
                 <div class="timeline-item">
-                    <div class="timeline-date">SUMMER 2025</div>
+                    <div class="timeline-date">Summer 2025</div>
                     <div class="timeline-marker"></div>
                     <div class="experience-card">
                         <div class="experience-header">
@@ -900,7 +1007,7 @@
                                 <div class="experience-title">Customer Analytics Intern</div>
                                 <div class="experience-company">GameChanger by Dick's Sporting Goods</div>
                             </div>
-                            <div class="experience-type">3-Month Internship</div>
+                            <div class="experience-type">Internship</div>
                             <div class="experience-type">New York City, NY & Remote</div>
                         </div>
 
@@ -1321,7 +1428,7 @@
                     <div class="timeline-marker"></div>
                     <div class="experience-card">
                         <div class="experience-header">
-                            <img src="images/ga4-logo.png" alt="GA4" class="company-logo">
+                            <img src="images/tmp.png" alt="tmp" class="company-logo">
                             <div class="experience-title-section">
                                 <div class="experience-title">Technology Management</div>
                                 <div class="experience-company">UC Santa Barbara Extension</div>
